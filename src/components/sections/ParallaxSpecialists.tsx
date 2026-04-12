@@ -196,7 +196,7 @@ function DoctorCard({ doctor }: { doctor: typeof specialists[0] }) {
   )
 }
 
-export function ParallaxSpecialists() {
+export function ParallaxSpecialists({ dict }: { dict: any }) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [isPaused, setIsPaused] = useState(false)
 
@@ -236,7 +236,7 @@ export function ParallaxSpecialists() {
           Elite <span className="text-gradient-primary italic pr-4">Specialists</span>
         </h2>
         <p className="max-w-2xl text-sm md:text-xl text-muted-foreground leading-relaxed font-light">
-          Headed by the world&apos;s most qualified medical visionaries, bringing global innovation to local care.
+          {dict.sections.doctors.subtitle}
         </p>
       </div>
 
