@@ -1,14 +1,12 @@
 "use client"
 
 import { useEffect } from "react"
-import { useRouter } from "next/navigation"
 
 export default function RootPage() {
-  const router = useRouter()
-
   useEffect(() => {
-    router.replace("/en")
-  }, [router])
+    // Robust redirect for GitHub Pages static export
+    window.location.replace("/hospital_landing/en/")
+  }, [])
 
   return null
 }
