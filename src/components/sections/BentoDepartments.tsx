@@ -33,8 +33,10 @@ function DepartmentCard({ dept, className }: { dept: typeof departmentsData[0], 
         <div className="absolute inset-0 z-0 bg-slate-900">
           <Image 
             src={dept.image}
-            alt={dept.title}
+            alt={`Medical services at our ${dept.title} department`}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+            loading="lazy"
             className="object-cover opacity-50 group-hover:scale-110 group-hover:opacity-40 transition-all duration-1000"
           />
           <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/60 to-transparent" />
@@ -44,7 +46,7 @@ function DepartmentCard({ dept, className }: { dept: typeof departmentsData[0], 
         <div className="absolute inset-0 z-10 p-6 md:p-8 flex flex-col justify-between">
           <div className="flex justify-between items-start">
             <div className="size-10 md:size-14 rounded-xl md:rounded-2xl bg-royal-cobalt text-white flex items-center justify-center shadow-lg">
-              <dept.icon size={20} className="md:size-7" />
+              <dept.icon size={20} className="md:size-7" aria-hidden="true" />
             </div>
             <div className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
                <span className="text-[8px] md:text-[10px] font-bold text-white uppercase tracking-widest">Elite Dept</span>
@@ -67,7 +69,7 @@ function DepartmentCard({ dept, className }: { dept: typeof departmentsData[0], 
             <div className="flex flex-wrap gap-1.5 md:gap-2 mt-1">
                {dept.services.slice(0, 3).map((service, i) => (
                  <div key={i} className="flex items-center gap-1 px-2 py-0.5 md:px-3 md:py-1.5 rounded-lg md:rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 group-hover:bg-royal-cobalt/20 transition-all">
-                    <CheckCircle2 size={8} className="text-electric-cyan md:size-3" />
+                    <CheckCircle2 size={8} className="text-electric-cyan md:size-3" aria-hidden="true" />
                     <span className="text-[7px] md:text-[10px] font-bold text-white uppercase tracking-tighter">{service}</span>
                  </div>
                ))}
@@ -80,7 +82,7 @@ function DepartmentCard({ dept, className }: { dept: typeof departmentsData[0], 
 
             <div className="mt-1 md:mt-2 pt-3 md:pt-4 border-t border-white/10 opacity-100 md:opacity-0 md:-translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
                <button className="flex items-center gap-2 text-[10px] md:text-sm font-bold text-electric-cyan hover:gap-4 transition-all">
-                 Consult Specialist <ChevronRight size={12} className="md:size-4" />
+                 Consult Specialist <ChevronRight size={12} className="md:size-4" aria-hidden="true" />
                </button>
             </div>
           </div>

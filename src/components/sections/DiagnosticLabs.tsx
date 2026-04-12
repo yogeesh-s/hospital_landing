@@ -47,7 +47,7 @@ function DiagnosticNode({ service, index, isActive, onClick }: {
              "relative size-full rounded-xl flex items-center justify-center transition-colors",
              isActive ? "bg-white text-royal-cobalt" : "bg-royal-cobalt/10 text-royal-cobalt"
            )}>
-             <service.icon size={20} className="md:size-6" />
+             <service.icon size={20} className="md:size-6" aria-hidden="true" />
            </div>
         </div>
 
@@ -93,7 +93,7 @@ export function DiagnosticLabs({ dict }: { dict: any }) {
           
           <div className="flex items-center gap-6 md:gap-10 p-4 md:p-6 glass rounded-[1.5rem] md:rounded-[2rem] border-border bg-muted/30 shadow-2xl w-full md:w-auto justify-center md:justify-start">
              <div className="flex items-center gap-3 md:gap-4">
-                <ShieldCheck size={20} className="text-royal-cobalt md:size-6" />
+                <ShieldCheck size={20} className="text-royal-cobalt md:size-6" aria-hidden="true" />
                 <div className="flex flex-col">
                    <span className="font-bold text-foreground text-sm md:text-lg leading-none">ISO 15189</span>
                    <p className="text-[8px] md:text-[10px] uppercase font-bold text-muted-foreground tracking-widest mt-1">Certified</p>
@@ -101,7 +101,7 @@ export function DiagnosticLabs({ dict }: { dict: any }) {
              </div>
              <div className="w-px h-10 bg-border" />
              <div className="flex items-center gap-3 md:gap-4">
-                <Zap size={20} className="text-electric-cyan animate-pulse md:size-6" />
+                <Zap size={20} className="text-electric-cyan animate-pulse md:size-6" aria-hidden="true" />
                 <div className="flex flex-col">
                    <span className="font-bold text-foreground text-sm md:text-lg leading-none">2hr Turnaround</span>
                    <p className="text-[8px] md:text-[10px] uppercase font-bold text-muted-foreground tracking-widest mt-1">Rapid Results</p>
@@ -135,8 +135,10 @@ export function DiagnosticLabs({ dict }: { dict: any }) {
               >
                 <Image 
                   src={activeService.image}
-                  alt={activeService.title}
+                  alt={`High-precision equipment in our ${activeService.title} laboratory`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1000px"
+                  loading="lazy"
                   className="object-cover opacity-20 dark:opacity-70 scale-125 transition-transform duration-[5000ms]"
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/40 to-background" />
@@ -145,7 +147,7 @@ export function DiagnosticLabs({ dict }: { dict: any }) {
                    <div className="flex flex-col gap-4 sm:gap-6 md:gap-10">
                       <div className="flex items-center gap-3 md:gap-6">
                          <div className="size-8 sm:size-12 md:size-16 rounded-lg md:rounded-[1.25rem] bg-royal-cobalt text-white flex items-center justify-center shadow-xl shadow-royal-cobalt/20 shrink-0">
-                            <activeService.icon size={16} className="sm:size-6 md:size-8" />
+                            <activeService.icon size={16} className="sm:size-6 md:size-8" aria-hidden="true" />
                          </div>
                          <div className="flex flex-col">
                             <h4 className="text-[6px] sm:text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] text-royal-cobalt">Elite Medical Unit</h4>
@@ -167,7 +169,7 @@ export function DiagnosticLabs({ dict }: { dict: any }) {
                              className="px-2 py-1 md:p-5 rounded-lg md:rounded-[1.5rem] bg-background/60 dark:bg-slate-950/60 backdrop-blur-xl border border-border flex items-center gap-1.5 md:gap-3 hover:bg-royal-cobalt/10 transition-all group/feat"
                            >
                               <div className="size-4 md:size-8 rounded-md md:rounded-lg bg-royal-cobalt/10 text-royal-cobalt flex items-center justify-center group-hover/feat:bg-royal-cobalt group-hover/feat:text-white transition-colors shrink-0">
-                                 <Plus size={8} className="md:size-4" />
+                                 <Plus size={8} className="md:size-4" aria-hidden="true" />
                               </div>
                               <span className="text-[7px] sm:text-[9px] md:text-[11px] font-bold uppercase tracking-widest text-foreground">{feature}</span>
                            </motion.div>
@@ -180,7 +182,7 @@ export function DiagnosticLabs({ dict }: { dict: any }) {
                          <div className="flex -space-x-2 md:-space-x-3 shrink-0">
                             {[...Array(3)].map((_, i) => (
                               <div key={i} className="size-6 sm:size-10 md:size-12 rounded-full border-[1px] md:border-[3px] border-background bg-muted flex items-center justify-center shadow-lg">
-                                 <Microscope size={10} className="sm:size-4 md:size-5 text-royal-cobalt" />
+                                 <Microscope size={10} className="sm:size-4 md:size-5 text-royal-cobalt" aria-hidden="true" />
                               </div>
                             ))}
                          </div>

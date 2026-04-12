@@ -125,22 +125,18 @@ export function Hero({ dict }: HeroProps) {
               <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] text-royal-cobalt">Precision in Every Heartbeat</span>
             </motion.div>
 
-            <div className="flex flex-col w-full gap-1 md:gap-2">
-              <Reveal delay={0.1}>
-                <h1 className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-slate-900 dark:text-white">
-                  {dict.hero.title_part1}
-                </h1>
-              </Reveal>
-              <div className="flex items-center gap-3 md:gap-6">
-                 <Reveal delay={0.3}>
-                   <h1 className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-gradient-primary">
-                     {dict.hero.title_part2}
-                   </h1>
-                 </Reveal>
+            <h1 className="flex flex-col w-full gap-1 md:gap-2">
+              <span className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-slate-900 dark:text-white">
+                <Reveal delay={0.1}>{dict.hero.title_part1}</Reveal>
+              </span>
+              <span className="flex items-center gap-3 md:gap-6">
+                 <span className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-gradient-primary">
+                   <Reveal delay={0.2}>{dict.hero.title_part2}</Reveal>
+                 </span>
                  <motion.div 
                    initial={{ scaleX: 0 }}
                    animate={{ scaleX: 1 }}
-                   transition={{ delay: 0.8, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                   transition={{ delay: 0.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                    className="hidden md:block h-2 flex-1 bg-royal-cobalt/10 rounded-full origin-left relative overflow-hidden"
                  >
                     <motion.div 
@@ -149,18 +145,16 @@ export function Hero({ dict }: HeroProps) {
                       className="absolute inset-0 bg-linear-to-r from-transparent via-royal-cobalt to-transparent opacity-50"
                     />
                  </motion.div>
-              </div>
-              <Reveal delay={0.5}>
-                <h1 className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-slate-900 dark:text-white">
-                  {dict.hero.title_part3}
-                </h1>
-              </Reveal>
-            </div>
+              </span>
+              <span className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-slate-900 dark:text-white">
+                <Reveal delay={0.3}>{dict.hero.title_part3}</Reveal>
+              </span>
+            </h1>
 
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
+              transition={{ delay: 0.4 }}
               className="w-full lg:max-w-xl text-sm md:text-2xl text-muted-foreground leading-relaxed font-medium"
             >
               Experience the Top 1% of Global Healthcare. Powered by AI diagnostics and compassionate specialists.
@@ -169,9 +163,9 @@ export function Hero({ dict }: HeroProps) {
 
           <div className="flex flex-col gap-6 md:gap-10 w-full">
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9 }}
+              transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row items-center gap-4 md:gap-8 w-full"
             >
               <Magnetic strength={0.2} className="w-full sm:w-auto">
@@ -195,7 +189,7 @@ export function Hero({ dict }: HeroProps) {
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.2 }}
+              transition={{ delay: 0.6 }}
               className="grid grid-cols-3 gap-1.5 md:gap-12 py-4 md:py-8 border-y border-muted/50 w-full"
             >
                <div className="flex flex-col gap-0.5 md:gap-1 items-center md:items-start text-center md:text-left">
@@ -226,16 +220,17 @@ export function Hero({ dict }: HeroProps) {
         <div className="relative flex justify-center lg:justify-end mt-12 lg:mt-0 w-full">
           <motion.div style={{ y: y1 }} className="relative z-10 w-full lg:max-w-[600px]">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
-              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ type: "spring", stiffness: 40, damping: 15, delay: 0.2 }}
+              initial={{ opacity: 1, scale: 1, rotate: 0 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
               className="relative w-full aspect-[4/5] rounded-[2.5rem] md:rounded-[5rem] overflow-hidden shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)] md:shadow-[0_80px_150px_-20px_rgba(0,0,0,0.3)] border-[6px] md:border-[12px] border-white/5 backdrop-blur-md"
             >
               <Image 
                 src="/assets/images/hero/hero-main.jpeg"
                 alt="Elite Hospital Modern Aesthetic"
                 fill
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 768px) 100vw, 600px"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-linear-to-tr from-royal-cobalt/40 via-transparent to-electric-cyan/20 mix-blend-overlay" />

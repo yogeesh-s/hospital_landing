@@ -5,8 +5,15 @@ import { Hospital, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter, 
 import { Magnetic } from "@/components/motion/Magnetic"
 
 export function Footer({ lang, dict }: { lang: string, dict: any }) {
+  const socialLinks = [
+    { Icon: Facebook, name: "Facebook", href: "#" },
+    { Icon: Instagram, name: "Instagram", href: "#" },
+    { Icon: Linkedin, name: "LinkedIn", href: "#" },
+    { Icon: Twitter, name: "Twitter", href: "#" },
+  ]
+
   return (
-    <footer className="bg-muted/10 pt-16 md:pt-32 pb-12 px-6">
+    <footer className="bg-muted/10 pt-16 md:pt-32 pb-12 px-6" aria-label="Site Footer">
       <div className="max-w-[1400px] mx-auto">
         {/* Final CTA Banner */}
         <div className="relative overflow-hidden rounded-[2.5rem] md:rounded-[4rem] bg-royal-cobalt p-10 md:p-24 text-white mb-16 md:mb-32 shadow-[0_40px_80px_-20px_rgba(37,99,235,0.4)]">
@@ -22,7 +29,10 @@ export function Footer({ lang, dict }: { lang: string, dict: any }) {
               Join thousands of patients who trust Elite Hospital for their healthcare needs. Book your appointment today.
             </p>
             <Magnetic strength={0.2}>
-              <button className="h-16 md:h-20 px-10 md:px-14 rounded-2xl md:rounded-[2.5rem] bg-white text-royal-cobalt font-black uppercase tracking-widest text-sm md:text-lg shadow-2xl hover:scale-105 transition-all active:scale-95 flex items-center gap-3">
+              <button 
+                className="h-16 md:h-20 px-10 md:px-14 rounded-2xl md:rounded-[2.5rem] bg-white text-royal-cobalt font-black uppercase tracking-widest text-sm md:text-lg shadow-2xl hover:scale-105 transition-all active:scale-95 flex items-center gap-3"
+                aria-label={dict.navbar.book_appointment}
+              >
                 {dict.navbar.book_appointment}
                 <ArrowUpRight size={20} className="md:size-6" />
               </button>
@@ -37,7 +47,7 @@ export function Footer({ lang, dict }: { lang: string, dict: any }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20 mb-16 md:mb-24">
           {/* Brand Column */}
           <div className="flex flex-col gap-6 md:gap-8">
-            <Link href={`/${lang}`} className="flex items-center gap-2.5 group">
+            <Link href={`/${lang}`} className="flex items-center gap-2.5 group" aria-label="Elite Hospital Home">
               <div className="bg-royal-cobalt p-2 rounded-xl text-white group-hover:rotate-12 transition-transform shadow-lg shadow-royal-cobalt/20">
                 <Hospital size={20} className="md:size-6" />
               </div>
@@ -47,8 +57,13 @@ export function Footer({ lang, dict }: { lang: string, dict: any }) {
               Leading the way in medical excellence, trusted care, and advanced technology for a healthier tomorrow.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Instagram, Linkedin, Twitter].map((Icon, i) => (
-                <Link key={i} href="#" className="size-11 rounded-xl bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-royal-cobalt hover:text-white transition-all shadow-sm">
+              {socialLinks.map(({ Icon, name, href }, i) => (
+                <Link 
+                  key={i} 
+                  href={href} 
+                  aria-label={`Visit our ${name} page`}
+                  className="size-11 rounded-xl bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-royal-cobalt hover:text-white transition-all shadow-sm"
+                >
                   <Icon size={18} />
                 </Link>
               ))}
@@ -80,15 +95,15 @@ export function Footer({ lang, dict }: { lang: string, dict: any }) {
             <h4 className="font-bold text-lg md:text-xl tracking-tight">Medical Center</h4>
             <div className="flex flex-col gap-4 md:gap-6">
               <div className="flex items-start gap-4">
-                <MapPin size={20} className="text-royal-cobalt shrink-0 mt-1" />
+                <MapPin size={20} className="text-royal-cobalt shrink-0 mt-1" aria-hidden="true" />
                 <p className="text-sm md:text-base text-muted-foreground leading-snug">123 Health Blvd, Medical District, Bangalore, KA 560001</p>
               </div>
               <div className="flex items-center gap-4">
-                <Phone size={20} className="text-royal-cobalt shrink-0" />
+                <Phone size={20} className="text-royal-cobalt shrink-0" aria-hidden="true" />
                 <p className="text-sm md:text-base text-muted-foreground font-bold">+91 (80) 1234 5678</p>
               </div>
               <div className="flex items-center gap-4">
-                <Mail size={20} className="text-royal-cobalt shrink-0" />
+                <Mail size={20} className="text-royal-cobalt shrink-0" aria-hidden="true" />
                 <p className="text-sm md:text-base text-muted-foreground font-medium break-all underline underline-offset-4 decoration-royal-cobalt/20">contact@elitehospital.com</p>
               </div>
             </div>
@@ -100,7 +115,7 @@ export function Footer({ lang, dict }: { lang: string, dict: any }) {
             <p className="text-[10px] md:text-xs text-muted-foreground text-center font-medium">
               © 2026 Elite Hospital. {dict.footer.rights}
             </p>
-            <div className="hidden md:block w-px h-4 bg-muted/50" />
+            <div className="hidden md:block w-px h-4 bg-muted/50" aria-hidden="true" />
             <p className="text-[10px] md:text-xs text-muted-foreground font-medium">
               Developed by <span className="font-black text-royal-cobalt uppercase tracking-widest italic">Vorabbit</span>
             </p>

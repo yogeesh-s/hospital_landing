@@ -54,6 +54,7 @@ export function AboutHospital({ dict }: { dict: any }) {
                     src="/assets/images/sections/about-lobby.jpg"
                     alt="Elite Hospital Vision"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-linear-to-tr from-royal-cobalt/40 via-transparent to-transparent" />

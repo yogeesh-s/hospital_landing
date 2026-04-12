@@ -35,13 +35,15 @@ export function PatientStories({ dict }: { dict: any }) {
             <div className="relative aspect-video rounded-2xl md:rounded-3xl overflow-hidden bg-muted group">
                <Image 
                  src={t.image}
-                 alt={t.name}
+                 alt={`Patient story video thumbnail for ${t.name}`}
                  fill
+                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                 loading="lazy"
                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                />
                <div className="absolute inset-0 bg-linear-to-br from-royal-cobalt/40 to-electric-cyan/40 mix-blend-multiply opacity-60" />
                <div className="absolute inset-0 flex items-center justify-center">
-                  <PlayCircle className="size-8 md:size-12 text-white group-hover:scale-110 transition-transform cursor-pointer relative z-10" strokeWidth={1.5} />
+                  <PlayCircle className="size-8 md:size-12 text-white group-hover:scale-110 transition-transform cursor-pointer relative z-10" strokeWidth={1.5} aria-hidden="true" />
                </div>
                <div className="absolute bottom-2 right-2 md:bottom-3 md:right-3 px-2 py-1 rounded-md md:rounded-lg bg-black/40 backdrop-blur-md text-[7px] md:text-[10px] text-white font-bold uppercase tracking-wider z-10">
                   Video Story
@@ -51,11 +53,11 @@ export function PatientStories({ dict }: { dict: any }) {
             <div className="flex flex-col gap-3 md:gap-4">
               <div className="flex gap-1">
                 {[...Array(t.rating)].map((_, i) => (
-                  <Star key={i} className="size-3 md:size-3.5 text-royal-cobalt" fill="var(--color-royal-cobalt)" />
+                  <Star key={i} className="size-3 md:size-3.5 text-royal-cobalt" fill="var(--color-royal-cobalt)" aria-hidden="true" />
                 ))}
               </div>
               <div className="relative">
-                <Quote className="size-4 md:size-6 absolute -top-1 -left-3 md:-top-2 md:-left-4 text-royal-cobalt/10 -z-10" />
+                <Quote className="size-4 md:size-6 absolute -top-1 -left-3 md:-top-2 md:-left-4 text-royal-cobalt/10 -z-10" aria-hidden="true" />
                 <p className="text-[13px] md:text-base text-muted-foreground leading-relaxed italic">
                   "{t.story}"
                 </p>

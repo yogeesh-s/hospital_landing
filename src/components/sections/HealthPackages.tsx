@@ -49,8 +49,10 @@ export function HealthPackages({ dict }: { dict: any }) {
               <div className="relative h-36 md:h-48 w-full overflow-hidden">
                 <Image 
                   src={pkg.image}
-                  alt={pkg.title}
+                  alt={`Overview of ${pkg.title} health package`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  loading="lazy"
                   className="object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
@@ -72,7 +74,7 @@ export function HealthPackages({ dict }: { dict: any }) {
                    {pkg.features.map((feature, j) => (
                      <div key={j} className="flex items-center gap-3">
                         <div className="size-4 md:size-5 rounded-full bg-royal-cobalt/10 flex items-center justify-center text-royal-cobalt shrink-0">
-                           <Check size={10} className="md:size-3" strokeWidth={3} />
+                           <Check size={10} className="md:size-3" strokeWidth={3} aria-hidden="true" />
                         </div>
                         <span className="text-xs md:text-sm font-medium text-foreground/80">{feature}</span>
                      </div>
@@ -85,7 +87,7 @@ export function HealthPackages({ dict }: { dict: any }) {
                     ? "bg-royal-cobalt text-white shadow-xl hover:scale-[1.02]" 
                     : "border border-royal-cobalt text-royal-cobalt hover:bg-royal-cobalt hover:text-white"
                 )}>
-                  Book Package <ArrowRight size={14} className="md:size-4" />
+                  Book Package <ArrowRight size={14} className="md:size-4" aria-hidden="true" />
                 </button>
               </div>
             </motion.div>

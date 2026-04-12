@@ -50,8 +50,10 @@ function DoctorCard({ doctor }: { doctor: typeof specialists[0] }) {
       >
         <Image 
           src={doctor.image}
-          alt={doctor.name}
+          alt={`Portrait of ${doctor.name}, ${doctor.specialty}`}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+          loading="lazy"
           className="object-cover opacity-80 transition-transform duration-[2000ms] group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90" />
@@ -98,14 +100,14 @@ function DoctorCard({ doctor }: { doctor: typeof specialists[0] }) {
                     <div className="grid grid-cols-2 gap-4 md:gap-6">
                        <div className="flex flex-col gap-1">
                           <div className="flex items-center gap-2 text-electric-cyan">
-                             <UserCheck size={12} className="md:size-3.5" />
+                             <UserCheck size={12} className="md:size-3.5" aria-hidden="true" />
                              <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest">Success Rate</span>
                           </div>
                           <span className="text-base md:text-xl font-bold">{doctor.metrics.success}%</span>
                        </div>
                        <div className="flex flex-col gap-1">
                           <div className="flex items-center gap-2 text-yellow-500">
-                             <Star size={12} className="md:size-3.5" fill="currentColor" />
+                             <Star size={12} className="md:size-3.5" fill="currentColor" aria-hidden="true" />
                              <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest">Patient Rating</span>
                           </div>
                           <span className="text-base md:text-xl font-bold">{doctor.metrics.satisfaction}/5.0</span>
@@ -122,7 +124,7 @@ function DoctorCard({ doctor }: { doctor: typeof specialists[0] }) {
 
                     <button className="h-10 md:h-14 w-full rounded-lg md:rounded-2xl bg-white text-slate-950 font-black text-[9px] md:text-xs uppercase tracking-[0.2em] shadow-2xl flex items-center justify-center gap-2 md:gap-3 hover:bg-royal-cobalt hover:text-white transition-all active:scale-95">
                        Direct Consultation
-                       <Plus size={12} className="md:size-4" />
+                       <Plus size={12} className="md:size-4" aria-hidden="true" />
                     </button>
                   </motion.div>
                 )}
@@ -131,11 +133,11 @@ function DoctorCard({ doctor }: { doctor: typeof specialists[0] }) {
               {!isHovered && (
                 <div className="flex items-center gap-4 md:gap-6 text-white/40">
                    <div className="flex items-center gap-2">
-                      <GraduationCap size={14} className="md:size-4" />
+                      <GraduationCap size={14} className="md:size-4" aria-hidden="true" />
                       <span className="text-[10px] font-bold uppercase tracking-widest">{doctor.qualifications.split(',')[0]}</span>
                    </div>
                    <div className="flex items-center gap-2">
-                      <Briefcase size={14} className="md:size-4" />
+                      <Briefcase size={14} className="md:size-4" aria-hidden="true" />
                       <span className="text-[10px] font-bold uppercase tracking-widest">{doctor.experience}</span>
                    </div>
                 </div>
@@ -196,16 +198,18 @@ export function ParallaxSpecialists({ dict }: { dict: any }) {
       <div className="max-w-[1600px] mx-auto relative group/carousel">
         <button 
           onClick={() => scroll('left')}
+          aria-label="Previous specialist"
           className="absolute -left-4 lg:-left-12 top-1/2 -translate-y-1/2 z-30 size-16 md:size-20 rounded-full glass border border-white/20 flex items-center justify-center hover:bg-royal-cobalt hover:text-white transition-all shadow-2xl opacity-0 group-hover/carousel:opacity-100 hidden xl:flex"
         >
-          <ChevronLeft className="size-8 md:size-10" strokeWidth={1} />
+          <ChevronLeft className="size-8 md:size-10" strokeWidth={1} aria-hidden="true" />
         </button>
         
         <button 
           onClick={() => scroll('right')}
+          aria-label="Next specialist"
           className="absolute -right-4 lg:-right-12 top-1/2 -translate-y-1/2 z-30 size-16 md:size-20 rounded-full glass border border-white/20 flex items-center justify-center hover:bg-royal-cobalt hover:text-white transition-all shadow-2xl opacity-0 group-hover/carousel:opacity-100 hidden xl:flex"
         >
-          <ChevronRight className="size-8 md:size-10" strokeWidth={1} />
+          <ChevronRight className="size-8 md:size-10" strokeWidth={1} aria-hidden="true" />
         </button>
 
         <div 

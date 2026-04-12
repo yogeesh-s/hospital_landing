@@ -26,13 +26,50 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     kn: "ಎಲೈಟ್ ಆಸ್ಪತ್ರೆಯೊಂದಿಗೆ ವಿಶ್ವ ದರ್ಜೆಯ ವೈದ್ಯಕೀಯ ಸೇವೆಯನ್ನು ಅನುಭವಿಸಿ. ಅತ್ಯಾಧುನಿಕ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ಅನುಕಂಪದ ತಜ್ಞರು ನಿಮ್ಮ ಸೇವೆಯಲ್ಲಿ."
   }
 
+  const title = titles[lang] || titles.en
+  const description = descriptions[lang] || descriptions.en
+  const url = `https://elitehospital.com/${lang}`
+
   return {
-    title: titles[lang] || titles.en,
-    description: descriptions[lang] || descriptions.en,
+    title,
+    description,
     alternates: {
       languages: {
         'en-US': '/en',
         'kn-IN': '/kn',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: 'Elite Hospital',
+      locale: lang === 'kn' ? 'kn_IN' : 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: '/assets/images/hero/hero-main.jpeg',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/assets/images/hero/hero-main.jpeg'],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
     },
   }

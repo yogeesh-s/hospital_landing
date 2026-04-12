@@ -98,8 +98,10 @@ export function InteractiveBodyMap({ dict }: { dict: any }) {
             <div className="relative w-full h-full rounded-[2rem] md:rounded-[3.5rem] overflow-hidden bg-slate-900 shadow-[0_0_50px_rgba(37,99,235,0.15)] group/map border border-white/5">
               <Image 
                 src="/assets/images/sections/diagnostics-lab.avif"
-                alt="Realistic Human Anatomy 3D"
+                alt="3D interactive human anatomy map for clinical precision"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                loading="lazy"
                 className="object-cover opacity-70 mix-blend-screen transition-transform duration-1000 group-hover/map:scale-105"
               />
               <div className="absolute inset-0 bg-radial-[at_center_center] from-transparent via-slate-900/20 to-slate-900" />
@@ -114,6 +116,7 @@ export function InteractiveBodyMap({ dict }: { dict: any }) {
                 {bodyParts.map((part) => (
                   <button
                     key={part.id}
+                    aria-label={`Select ${part.name} department`}
                     className={cn(
                       "absolute group -translate-x-1/2 -translate-y-1/2 flex items-center justify-center transition-all duration-500",
                       activePart.id === part.id ? "scale-125 md:scale-150" : "hover:scale-125"
@@ -160,13 +163,15 @@ export function InteractiveBodyMap({ dict }: { dict: any }) {
                   <div className="relative h-28 sm:h-36 md:h-48 w-full rounded-[1.2rem] md:rounded-[2rem] overflow-hidden border border-white/10 shadow-lg shrink-0">
                      <Image 
                        src={activePart.image}
-                       alt={activePart.name}
+                       alt={`Clinical view of ${activePart.name} department`}
                        fill
+                       sizes="(max-width: 768px) 100vw, 600px"
+                       loading="lazy"
                        className="object-cover"
                      />
                      <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent" />
                      <div className="absolute top-4 right-4 md:top-6 md:right-6 size-8 md:size-12 rounded-lg md:rounded-xl bg-royal-cobalt text-white flex items-center justify-center shadow-2xl">
-                        <activePart.icon size={16} className="md:size-6" />
+                        <activePart.icon size={16} className="md:size-6" aria-hidden="true" />
                      </div>
                   </div>
 

@@ -39,8 +39,10 @@ export function HospitalEvents({ dict }: { dict: any }) {
             >
               <Image 
                 src={event.image}
-                alt={event.title}
+                alt={`Cover image for event: ${event.title}`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                loading="lazy"
                 className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000"
               />
               <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent" />
@@ -52,7 +54,7 @@ export function HospitalEvents({ dict }: { dict: any }) {
                           {event.category}
                        </div>
                        <div className="flex items-center gap-2 text-white/60 text-[10px] md:text-xs font-bold uppercase tracking-widest">
-                          <Calendar size={12} className="md:size-3.5 text-electric-cyan" />
+                          <Calendar size={12} className="md:size-3.5 text-electric-cyan" aria-hidden="true" />
                           {event.date}
                        </div>
                     </div>
@@ -61,8 +63,11 @@ export function HospitalEvents({ dict }: { dict: any }) {
                        <h3 className="text-2xl md:text-5xl font-bold tracking-tight leading-tight max-w-lg group-hover:text-electric-cyan transition-colors">
                           {event.title}
                        </h3>
-                       <button className="size-12 md:size-16 rounded-full bg-white text-slate-950 flex items-center justify-center group-hover:bg-royal-cobalt group-hover:text-white transition-all shadow-2xl shrink-0">
-                          <ArrowUpRight size={20} className="md:size-8" />
+                       <button 
+                         aria-label={`View details for ${event.title}`}
+                         className="size-12 md:size-16 rounded-full bg-white text-slate-950 flex items-center justify-center group-hover:bg-royal-cobalt group-hover:text-white transition-all shadow-2xl shrink-0"
+                       >
+                          <ArrowUpRight size={20} className="md:size-8" aria-hidden="true" />
                        </button>
                     </div>
                  </div>

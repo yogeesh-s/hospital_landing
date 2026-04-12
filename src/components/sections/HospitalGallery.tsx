@@ -34,15 +34,17 @@ export function HospitalGallery({ dict }: { dict: any }) {
             >
               <Image 
                 src={img}
-                alt="Elite Hospital Facility"
+                alt="Modern medical equipment and facilities at Elite Hospital"
                 width={800}
                 height={1000}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                loading="lazy"
                 className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
               />
               
               <div className="absolute inset-0 bg-royal-cobalt/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                  <div className="size-12 md:size-16 rounded-full bg-white text-royal-cobalt flex items-center justify-center scale-50 group-hover:scale-100 transition-transform duration-500 shadow-2xl">
-                    <Maximize2 size={20} className="md:size-6" />
+                    <Maximize2 size={20} className="md:size-6" aria-hidden="true" />
                  </div>
               </div>
             </motion.div>

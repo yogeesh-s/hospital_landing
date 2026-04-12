@@ -8,6 +8,7 @@ export function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false)
   const [hoverType, setHoverType] = useState<string | null>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(false)
   
   const mouseX = useMotionValue(-100)
   const mouseY = useMotionValue(-100)
@@ -43,8 +44,18 @@ export function CustomCursor() {
   }, [])
 
   useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove, { passive: true })
-    window.addEventListener("mouseover", handleMouseOver, { passive: true })
+    // Only enable for fine pointers (mouse)
+    const checkIsDesktop = () => {
+      const finePointer = window.matchMedia("(pointer: fine)").matches
+      setIsDesktop(finePointer)
+    }
+    
+    checkIsDesktop()
+    
+    if (window.matchMedia("(pointer: fine)").matches) {
+      window.addEventListener("mousemove", handleMouseMove, { passive: true })
+      window.addEventListener("mouseover", handleMouseOver, { passive: true })
+    }
     
     return () => {
       window.removeEventListener("mousemove", handleMouseMove)
@@ -52,7 +63,7 @@ export function CustomCursor() {
     }
   }, [handleMouseMove, handleMouseOver])
 
-  if (!isVisible) return null
+  if (!isDesktop || !isVisible) return null
 
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999] hidden lg:block overflow-hidden">
