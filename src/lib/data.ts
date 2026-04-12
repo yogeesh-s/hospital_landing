@@ -40,7 +40,7 @@ export const departmentsData = [
     title: "Gastroenterology", 
     icon: Droplets, 
     description: "Advanced digestive healthcare using minimally invasive endoscopic and laparoscopic techniques.", 
-    image: "/assets/images/sections/about-lobby.jpg",
+    image: "/assets/images/sections/about-lobby.webp",
     services: ["Endoscopy", "Liver Care", "Bariatrics"],
     className: "md:col-span-1 md:row-span-2" 
   },
@@ -73,7 +73,7 @@ export const labServicesData = [
     title: "Precision Lab",
     icon: Droplets,
     description: "NABL certified laboratory with automated analysis for zero-error results.",
-    image: "/assets/images/sections/about-lobby.jpg",
+    image: "/assets/images/sections/about-lobby.webp",
     features: ["Home Collection", "Same-day Reports", "Digital Records"]
   },
   {
@@ -105,7 +105,7 @@ export const healthPackages = [
     price: "₹14,999",
     description: "The gold standard in health screening for comprehensive physical assessment.",
     features: ["Full Blood Profile", "MRI Screening", "Cardiogram (TMT)", "Dietary Consult"],
-    image: "/assets/images/sections/about-lobby.jpg",
+    image: "/assets/images/sections/about-lobby.webp",
     popular: true
   },
   {
@@ -227,15 +227,15 @@ export const hospitalEvents = [
     title: "Rural Health Outreach Camp",
     date: "June 02, 2026",
     category: "Philanthropy",
-    image: "/assets/images/sections/about-lobby.jpg"
+    image: "/assets/images/sections/about-lobby.webp"
   }
 ]
 
 export const galleryImages = [
-  "/assets/images/hero/hero-main.jpeg",
+  "/assets/images/hero/hero-main.webp",
   "/assets/images/gallery/operating-room.jpeg",
   "/assets/images/gallery/patient-room.jpeg",
-  "/assets/images/sections/about-lobby.jpg",
+  "/assets/images/sections/about-lobby.webp",
   "/assets/images/sections/diagnostics-lab.avif",
   "/assets/images/departments/neurology.jpeg"
 ]

@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       type: 'website',
       images: [
         {
-          url: '/assets/images/hero/hero-main.jpeg',
+          url: '/assets/images/hero/hero-main.webp',
           width: 1200,
           height: 630,
           alt: title,
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       card: 'summary_large_image',
       title,
       description,
-      images: ['/assets/images/hero/hero-main.jpeg'],
+      images: ['/assets/images/hero/hero-main.webp'],
     },
     robots: {
       index: true,

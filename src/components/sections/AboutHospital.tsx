@@ -51,7 +51,7 @@ export function AboutHospital({ dict }: { dict: any }) {
             <div className="relative mt-8 lg:mt-0">
                <div className="relative aspect-[4/3] sm:aspect-square rounded-[2rem] md:rounded-[4rem] overflow-hidden border-[6px] md:border-[12px] border-white/5 shadow-2xl">
                   <Image 
-                    src="/assets/images/sections/about-lobby.jpg"
+                    src="/assets/images/sections/about-lobby.webp"
                     alt="Elite Hospital Visionary Lobby and Patient Care Center"
                     fill
                     loading="lazy"

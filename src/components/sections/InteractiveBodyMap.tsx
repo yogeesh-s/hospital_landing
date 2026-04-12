@@ -58,7 +58,7 @@ const bodyParts: BodyPart[] = [
     name: "Gastroenterology", 
     icon: Droplets, 
     description: "Comprehensive digestive health and organ care focusing on minimally invasive diagnostics.", 
-    image: "/assets/images/sections/about-lobby.jpg",
+    image: "/assets/images/sections/about-lobby.webp",
     x: "50%", 
     y: "48%" 
   },
