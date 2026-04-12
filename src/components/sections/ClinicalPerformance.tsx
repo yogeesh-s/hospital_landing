@@ -65,20 +65,38 @@ function RecoveryLineChart() {
 }
 
 // Circular Progress Component
-function CircularGauge({ value, label, metric = "Accuracy", sublabel }: { value: number, label: string, metric?: string, sublabel: string }) {
+function CircularGauge({ 
+  value, 
+  label, 
+  metric = "Accuracy", 
+  sublabel,
+  size = "md"
+}: { 
+  value: number, 
+  label: string, 
+  metric?: string, 
+  sublabel: string,
+  size?: "sm" | "md" | "lg"
+}) {
   const radius = 45
   const circumference = 2 * Math.PI * radius
   const offset = circumference - (value / 100) * circumference
 
+  const sizeClasses = {
+    sm: "size-28 md:size-36",
+    md: "size-32 md:size-44",
+    lg: "size-40 md:size-56"
+  }
+
   return (
-    <div className="flex flex-col items-center gap-3 md:gap-4">
-      <div className="relative size-32 md:size-44 flex items-center justify-center">
-        <svg className="size-full -rotate-90">
-          <circle cx="64" cy="64" r="45" className="fill-none stroke-muted/20 stroke-[6px] md:stroke-[8px]" />
+    <div className="flex flex-col items-center gap-3 md:gap-4 w-full">
+      <div className={cn("relative flex items-center justify-center", sizeClasses[size])}>
+        <svg viewBox="0 0 128 128" className="size-full -rotate-90">
+          <circle cx="64" cy="64" r={radius} className="fill-none stroke-muted/20 stroke-[6px] md:stroke-[8px]" />
           <motion.circle
             cx="64"
             cy="64"
-            r="45"
+            r={radius}
             className="fill-none stroke-royal-cobalt stroke-[6px] md:stroke-[8px]"
             strokeDasharray={circumference}
             initial={{ strokeDashoffset: circumference }}
@@ -87,14 +105,14 @@ function CircularGauge({ value, label, metric = "Accuracy", sublabel }: { value:
             style={{ filter: "drop-shadow(0 0 8px rgba(37, 99, 235, 0.4))" }}
           />
         </svg>
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
-           <span className="text-xl md:text-2xl font-black tracking-tighter">{value}%</span>
-           <span className="text-[7px] md:text-[8px] font-black uppercase text-royal-cobalt tracking-widest">{metric}</span>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+           <span className="text-lg sm:text-xl md:text-3xl font-black tracking-tighter leading-none mb-0.5 md:mb-1">{value}%</span>
+           <span className="text-[6px] sm:text-[7px] md:text-[10px] font-black uppercase text-royal-cobalt tracking-[0.15em] md:tracking-widest">{metric}</span>
         </div>
       </div>
-      <div className="text-center">
-         <h4 className="font-bold text-lg md:text-xl tracking-tight">{label}</h4>
-         <p className="text-[9px] md:text-[10px] text-muted-foreground uppercase font-black tracking-[0.2em]">{sublabel}</p>
+      <div className="text-center px-2">
+         <h4 className="font-bold text-base md:text-xl tracking-tight leading-tight mb-1">{label}</h4>
+         <p className="text-[8px] md:text-[10px] text-muted-foreground uppercase font-black tracking-[0.15em] md:tracking-[0.2em]">{sublabel}</p>
       </div>
     </div>
   )
