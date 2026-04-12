@@ -37,6 +37,9 @@ function DepartmentCard({ dept, className }: { dept: typeof departmentsData[0], 
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
             loading="lazy"
+            quality={80}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCI JahhKCYrKysyJSMoKywoMCwsKC80Jj4/Pj9BQmdBYHAdHw8BAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCI JahhKCYrKysyJSMoKywoMCwsKC80Jj4/Pj9BQmdBYHAdHw//AABEIACgAGAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAADAgEABAf/xAAeEAEBAAICAwEBAAAAAAAAAAACAAEDBBEFEiETMv/EABgBAQEBAQEAAAAAAAAAAAAAAgEAAwT/xAAgEQEBAAIBBQEBAQAAAAAAAAAAAQIRIQMSMUEiUWGB/9oADAMBAAIRAxEAPwD5oA0kCoAAAAAgDKgIoAkygLygLqgyoAAMqAAAAAAA//2Q=="
             className="object-cover opacity-50 group-hover:scale-110 group-hover:opacity-40 transition-all duration-1000"
           />
           <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/60 to-transparent" />

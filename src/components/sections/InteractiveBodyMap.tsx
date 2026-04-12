@@ -167,6 +167,9 @@ export function InteractiveBodyMap({ dict }: { dict: any }) {
                        fill
                        sizes="(max-width: 768px) 100vw, 600px"
                        loading="lazy"
+                       quality={80}
+                       placeholder="blur"
+                       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCI JahhKCYrKysyJSMoKywoMCwsKC80Jj4/Pj9BQmdBYHAdHw8BAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCI JahhKCYrKysyJSMoKywoMCwsKC80Jj4/Pj9BQmdBYHAdHw//AABEIACgAGAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAADAgEABAf/xAAeEAEBAAICAwEBAAAAAAAAAAACAAEDBBEFEiETMv/EABgBAQEBAQEAAAAAAAAAAAAAAgEAAwT/xAAgEQEBAAIBBQEBAQAAAAAAAAAAAQIRIQMSMUEiUWGB/9oADAMBAAIRAxEAPwD5oA0kCoAAAAAgDKgIoAkygLygLqgyoAAMqAAAAAAA//2Q=="
                        className="object-cover"
                      />
                      <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent" />

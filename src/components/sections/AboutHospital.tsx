@@ -54,6 +54,7 @@ export function AboutHospital({ dict }: { dict: any }) {
                     src="/assets/images/sections/about-lobby.jpg"
                     alt="Elite Hospital Visionary Lobby and Patient Care Center"
                     fill
+                    loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                     className="object-cover"
                     quality={80}
