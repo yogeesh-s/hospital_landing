@@ -17,16 +17,16 @@ interface StatCardProps {
 
 function StatCard({ value, suffix = "", label, icon: Icon, delay = 0, color, id }: StatCardProps) {
   const [count, setCount] = useState(0)
-  const [randomData] = useState<number[]>(() => 
-    typeof window !== "undefined" ? Array.from({ length: 12 }, () => Math.floor(Math.random() * 40) + 10) : []
-  )
-  const [randomId] = useState<number | null>(() => 
-    typeof window !== "undefined" ? Math.floor(Math.random() * 100) : null
-  )
+  const [randomData, setRandomData] = useState<number[]>([])
+  const [randomId, setRandomId] = useState<number | null>(null)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   useEffect(() => {
+    // Generate random values only on the client to avoid hydration mismatch
+    setRandomId(Math.floor(Math.random() * 100))
+    setRandomData(Array.from({ length: 12 }, () => Math.floor(Math.random() * 40) + 10))
+
     if (isInView) {
       const controls = animate(0, value, {
         duration: 3,
@@ -37,7 +37,7 @@ function StatCard({ value, suffix = "", label, icon: Icon, delay = 0, color, id 
       
       return () => controls.stop()
     }
-  }, [isInView, value, delay, randomId])
+  }, [isInView, value, delay])
 
   return (
     <motion.div

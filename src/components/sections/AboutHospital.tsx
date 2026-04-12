@@ -56,7 +56,9 @@ export function AboutHospital({ dict }: { dict: any }) {
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                     className="object-cover"
-                    quality={85}
+                    quality={80}
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCI JahhKCYrKysyJSMoKywoMCwsKC80Jj4/Pj9BQmdBYHAdHw8BAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCI JahhKCYrKysyJSMoKywoMCwsKC80Jj4/Pj9BQmdBYHAdHw//AABEIACgAGAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAADAgEABAf/xAAeEAEBAAICAwEBAAAAAAAAAAACAAEDBBEFEiETMv/EABgBAQEBAQEAAAAAAAAAAAAAAgEAAwT/xAAgEQEBAAIBBQEBAQAAAAAAAAAAAQIRIQMSMUEiUWGB/9oADAMBAAIRAxEAPwD5oA0kCoAAAAAgDKgIoAkygLygLqgyoAAMqAAAAAAA//2Q=="
                   />
                   <div className="absolute inset-0 bg-linear-to-tr from-royal-cobalt/40 via-transparent to-transparent" />
                </div>
