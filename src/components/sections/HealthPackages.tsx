@@ -52,7 +52,6 @@ export function HealthPackages({ dict }: { dict: any }) {
                   alt={pkg.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60"
-                  unoptimized
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
               </div>

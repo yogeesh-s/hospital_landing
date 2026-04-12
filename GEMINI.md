@@ -48,7 +48,7 @@ All generated files must strictly adhere to this map:
 
 ## 🧱 Static Export (SSG) Technical Rules
 - **Directives:** Interactive components MUST use `"use client"`.
-- **Image Optimization:** Use `next/image` with `unoptimized: true` for compatibility with `output: 'export'`.
+- **Image Optimization:** All images are optimized via the custom loader (`src/lib/image-loader.js`). Do NOT use `unoptimized: true` in component code; let the global config handle path-prefixing and optimization.
 - **Data Architecture:** No hardcoded content in sections. All strings come from dictionaries; all structured data lives in `src/lib/data.ts`.
 - **Vertical Rhythm:** Standardized vertical padding: **`py-16` (mobile)** and **`py-32` (desktop)**.
 - **Type Safety:** 100% Strict TypeScript. No `any` types.

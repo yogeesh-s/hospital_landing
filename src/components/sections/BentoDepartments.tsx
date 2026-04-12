@@ -36,7 +36,6 @@ function DepartmentCard({ dept, className }: { dept: typeof departmentsData[0], 
             alt={dept.title}
             fill
             className="object-cover opacity-50 group-hover:scale-110 group-hover:opacity-40 transition-all duration-1000"
-            unoptimized
           />
           <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/60 to-transparent" />
         </div>

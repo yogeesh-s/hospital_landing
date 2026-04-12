@@ -138,7 +138,6 @@ export function DiagnosticLabs({ dict }: { dict: any }) {
                   alt={activeService.title}
                   fill
                   className="object-cover opacity-20 dark:opacity-70 scale-125 transition-transform duration-[5000ms]"
-                  unoptimized
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/40 to-background" />
 

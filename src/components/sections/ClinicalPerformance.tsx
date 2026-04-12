@@ -65,7 +65,7 @@ function RecoveryLineChart() {
 }
 
 // Circular Progress Component
-function CircularGauge({ value, label, sublabel }: { value: number, label: string, sublabel: string }) {
+function CircularGauge({ value, label, metric = "Accuracy", sublabel }: { value: number, label: string, metric?: string, sublabel: string }) {
   const radius = 45
   const circumference = 2 * Math.PI * radius
   const offset = circumference - (value / 100) * circumference
@@ -89,7 +89,7 @@ function CircularGauge({ value, label, sublabel }: { value: number, label: strin
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
            <span className="text-xl md:text-2xl font-black tracking-tighter">{value}%</span>
-           <span className="text-[7px] md:text-[8px] font-black uppercase text-royal-cobalt tracking-widest">Accuracy</span>
+           <span className="text-[7px] md:text-[8px] font-black uppercase text-royal-cobalt tracking-widest">{metric}</span>
         </div>
       </div>
       <div className="text-center">
@@ -161,9 +161,9 @@ export function ClinicalPerformance({ dict }: { dict: any }) {
              </div>
              
              <div className="flex flex-col gap-8 md:gap-14">
-                <CircularGauge value={99.2} label="Surgical Precision" sublabel="Top 1% Global Rank" />
+                <CircularGauge value={99.2} label="Surgical Precision" metric="Precision" sublabel="Top 1% Global Rank" />
                 <div className="h-px w-full bg-white/5" />
-                <CircularGauge value={98.5} label="Diagnostic Accuracy" sublabel="AI Integrated Unit" />
+                <CircularGauge value={98.5} label="Diagnostic Success" metric="Success" sublabel="AI Integrated Unit" />
              </div>
 
              <button className="mt-10 md:mt-14 h-14 md:h-16 w-full rounded-xl md:rounded-2xl border border-royal-cobalt/30 text-royal-cobalt font-black text-[10px] md:text-xs uppercase tracking-[0.2em] hover:bg-royal-cobalt hover:text-white transition-all shadow-xl">

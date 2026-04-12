@@ -101,7 +101,6 @@ export function InteractiveBodyMap({ dict }: { dict: any }) {
                 alt="Realistic Human Anatomy 3D"
                 fill
                 className="object-cover opacity-70 mix-blend-screen transition-transform duration-1000 group-hover/map:scale-105"
-                unoptimized
               />
               <div className="absolute inset-0 bg-radial-[at_center_center] from-transparent via-slate-900/20 to-slate-900" />
 
@@ -164,7 +163,6 @@ export function InteractiveBodyMap({ dict }: { dict: any }) {
                        alt={activePart.name}
                        fill
                        className="object-cover"
-                       unoptimized
                      />
                      <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent" />
                      <div className="absolute top-4 right-4 md:top-6 md:right-6 size-8 md:size-12 rounded-lg md:rounded-xl bg-royal-cobalt text-white flex items-center justify-center shadow-2xl">

@@ -237,7 +237,6 @@ export function Hero({ dict }: HeroProps) {
                 alt="Elite Hospital Modern Aesthetic"
                 fill
                 className="object-cover"
-                unoptimized
               />
               <div className="absolute inset-0 bg-linear-to-tr from-royal-cobalt/40 via-transparent to-electric-cyan/20 mix-blend-overlay" />
             </motion.div>

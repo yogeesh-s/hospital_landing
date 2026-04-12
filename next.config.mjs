@@ -1,12 +1,8 @@
-const isProd = process.env.NODE_ENV === 'production'
-const isGithubActions = process.env.GITHUB_ACTIONS || false
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true'
 
-let basePath = ''
-
-if (isGithubActions) {
-  // Replace with your repository name if it's different
-  basePath = '/hospital_landing'
-}
+// Automatically detect repo name for GitHub Pages basePath
+const repo = process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}` : '/hospital_landing'
+const basePath = isGithubActions ? repo : ''
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -14,7 +10,11 @@ const nextConfig = {
   basePath: basePath,
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    loader: 'custom',
+    loaderFile: './src/lib/image-loader.js',
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 }
 

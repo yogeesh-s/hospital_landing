@@ -55,7 +55,6 @@ export function AboutHospital({ dict }: { dict: any }) {
                     alt="Elite Hospital Vision"
                     fill
                     className="object-cover"
-                    unoptimized
                   />
                   <div className="absolute inset-0 bg-linear-to-tr from-royal-cobalt/40 via-transparent to-transparent" />
                </div>

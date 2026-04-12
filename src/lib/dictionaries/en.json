@@ -18,7 +18,9 @@
     "years_experience": "Years of Clinical Excellence",
     "specialists": "Board-Certified Specialists",
     "surgeries": "Complex Surgeries Completed",
-    "wait_time": "Avg. Clinical Wait Time"
+    "wait_time": "Avg. Clinical Wait Time",
+    "emergency": "Emergency Response",
+    "response_time": "Avg. Response Time"
   },
   "sections": {
     "body_map": {

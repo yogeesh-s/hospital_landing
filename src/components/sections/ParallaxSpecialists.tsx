@@ -53,7 +53,6 @@ function DoctorCard({ doctor }: { doctor: typeof specialists[0] }) {
           alt={doctor.name}
           fill
           className="object-cover opacity-80 transition-transform duration-[2000ms] group-hover:scale-110"
-          unoptimized
         />
         <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90" />
         

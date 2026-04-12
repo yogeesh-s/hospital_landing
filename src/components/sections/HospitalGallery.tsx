@@ -38,7 +38,6 @@ export function HospitalGallery({ dict }: { dict: any }) {
                 width={800}
                 height={1000}
                 className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
-                unoptimized
               />
               
               <div className="absolute inset-0 bg-royal-cobalt/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">

@@ -42,7 +42,6 @@ export function HospitalEvents({ dict }: { dict: any }) {
                 alt={event.title}
                 fill
                 className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000"
-                unoptimized
               />
               <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent" />
 
