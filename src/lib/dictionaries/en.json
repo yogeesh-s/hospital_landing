@@ -1,0 +1,82 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Specialties",
+    "doctors": "Doctors",
+    "contact": "Contact",
+    "book_appointment": "Book Appointment"
+  },
+  "hero": {
+    "title_part1": "Precision Care,",
+    "title_part2": "Compassionate",
+    "title_part3": "Excellence",
+    "subtitle": "Experience the next generation of healthcare with Elite Hospital. Our world-class specialists and cutting-edge technology are here to serve you.",
+    "cta_primary": "Schedule a Visit",
+    "cta_secondary": "Learn More"
+  },
+  "stats": {
+    "years_experience": "Years of Excellence",
+    "specialists": "Expert Specialists",
+    "surgeries": "Successful Surgeries",
+    "wait_time": "Avg. Wait Time"
+  },
+  "sections": {
+    "body_map": {
+      "title": "Precision Care for Every Part of You",
+      "description": "Hover over the body map to explore our specialized departments and find the expert care you need."
+    },
+    "departments": {
+      "title": "World-Class Specialties",
+      "subtitle": "Discover our range of advanced medical services tailored for your well-being."
+    },
+    "diagnostics": {
+      "title": "Advanced Diagnostic & Lab Services",
+      "subtitle": "Cutting-edge technology for precise results. Our in-house labs and scanning centers ensure rapid and accurate diagnostics."
+    },
+    "doctors": {
+      "title": "Meet Our Elite Specialists",
+      "subtitle": "Headed by the most qualified and experienced medical professionals in the industry."
+    },
+    "testimonials": {
+      "title": "Patient Success Stories",
+      "subtitle": "Real stories from those who have experienced the Elite Hospital difference."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common inquiries about our services and policies."
+    },
+    "packages": {
+      "title": "Curated Health Packages",
+      "subtitle": "Tailored screening programs designed for every stage of your life journey."
+    },
+    "insurance": {
+      "title": "Partnered Insurance Providers",
+      "subtitle": "We accept a wide range of global and domestic insurance plans for your convenience."
+    },
+    "about": {
+      "title": "A Legacy of Trust & Innovation",
+      "subtitle": "Elite Hospital has been at the forefront of medical excellence for nearly two decades, combining global standards with a personalized touch."
+    },
+    "events": {
+      "title": "Latest Events & Summits",
+      "subtitle": "Stay updated with our medical milestones, global conferences, and community initiatives."
+    },
+    "gallery": {
+      "title": "Inside Elite Excellence",
+      "subtitle": "Explore our world-class facilities, cutting-edge technology, and healing environments."
+    },
+    "performance": {
+      "title": "Clinical Performance Dashboard",
+      "subtitle": "Transparent metrics reflecting our commitment to zero-compromise medical outcomes and patient recovery."
+    },
+    "contact": {
+      "title": "Connect With Us",
+      "subtitle": "Our dedicated team is available 24/7 to assist with your healthcare needs."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
