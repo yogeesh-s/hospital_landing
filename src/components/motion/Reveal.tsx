@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import { motion, useInView, useAnimation } from "motion/react"
+import { useRef } from "react"
+import { motion } from "motion/react"
 
 interface RevealProps {
   children: React.ReactNode
@@ -11,26 +11,17 @@ interface RevealProps {
 
 export function Reveal({ children, width = "fit-content", delay = 0.25 }: RevealProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
-  const mainControls = useAnimation()
-  const slideControls = useAnimation()
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible")
-      slideControls.start("visible")
-    }
-  }, [isInView, mainControls, slideControls])
 
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, translateY: "75px" },
+          visible: { opacity: 1, translateY: "0px" },
         }}
         initial="hidden"
-        animate={mainControls}
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.5, delay }}
       >
         {children}
@@ -41,8 +32,10 @@ export function Reveal({ children, width = "fit-content", delay = 0.25 }: Reveal
           visible: { left: "100%" },
         }}
         initial="hidden"
-        animate={slideControls}
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.5, ease: "easeIn", delay }}
+        className="hidden md:block"
         style={{
           position: "absolute",
           top: 4,

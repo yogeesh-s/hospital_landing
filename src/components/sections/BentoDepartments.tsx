@@ -81,7 +81,10 @@ function DepartmentCard({ dept, className }: { dept: typeof departmentsData[0], 
             </div>
 
             <div className="mt-1 md:mt-2 pt-3 md:pt-4 border-t border-white/10 opacity-100 md:opacity-0 md:-translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-               <button className="flex items-center gap-2 text-[10px] md:text-sm font-bold text-electric-cyan hover:gap-4 transition-all">
+               <button 
+                aria-label={`Consult with a specialist in ${dept.title}`}
+                className="flex items-center gap-2 text-[10px] md:text-sm font-bold text-electric-cyan hover:gap-4 transition-all"
+               >
                  Consult Specialist <ChevronRight size={12} className="md:size-4" aria-hidden="true" />
                </button>
             </div>
@@ -109,7 +112,10 @@ export function BentoDepartments({ dict }: { dict: any }) {
               {dict.sections.departments.subtitle}
             </p>
           </div>
-          <button className="h-14 md:h-16 px-8 md:px-10 rounded-xl md:rounded-2xl bg-royal-cobalt text-white font-bold text-base md:text-lg shadow-xl shadow-royal-cobalt/20 hover:scale-105 active:scale-95 transition-all whitespace-nowrap w-full md:w-auto">
+          <button 
+            aria-label="Explore all medical units and departments"
+            className="h-14 md:h-16 px-8 md:px-10 rounded-xl md:rounded-2xl bg-royal-cobalt text-white font-bold text-base md:text-lg shadow-xl shadow-royal-cobalt/20 hover:scale-105 active:scale-95 transition-all whitespace-nowrap w-full md:w-auto"
+          >
             Explore All Units
           </button>
         </div>

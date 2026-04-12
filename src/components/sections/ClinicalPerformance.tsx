@@ -11,7 +11,7 @@ function RecoveryLineChart() {
 
   return (
     <div className="relative w-full h-32 md:h-48 mt-6 md:mt-8">
-      <svg viewBox="0 0 300 100" className="w-full h-full overflow-visible">
+      <svg viewBox="0 0 300 100" className="w-full h-full overflow-visible" aria-hidden="true">
         {/* Background Grid Lines */}
         {[0, 25, 50, 75, 100].map((tick) => (
           <line key={tick} x1="0" y1={tick} x2="300" y2={tick} stroke="currentColor" strokeWidth="0.5" className="opacity-[0.05]" />
@@ -91,7 +91,7 @@ function CircularGauge({
   return (
     <div className="flex flex-col items-center gap-3 md:gap-4 w-full">
       <div className={cn("relative flex items-center justify-center", sizeClasses[size])}>
-        <svg viewBox="0 0 128 128" className="size-full -rotate-90">
+        <svg viewBox="0 0 128 128" className="size-full -rotate-90" aria-hidden="true">
           <circle cx="64" cy="64" r={radius} className="fill-none stroke-muted/20 stroke-[6px] md:stroke-[8px]" />
           <motion.circle
             cx="64"
@@ -140,7 +140,7 @@ export function ClinicalPerformance({ dict }: { dict: any }) {
              <div className="flex justify-between items-start mb-6 md:mb-10">
                 <div className="flex flex-col gap-2 md:gap-3">
                    <div className="flex items-center gap-2 text-royal-cobalt font-black uppercase tracking-widest text-[8px] md:text-[10px]">
-                      <TrendingUp size={14} className="md:size-4" />
+                      <TrendingUp size={14} className="md:size-4" aria-hidden="true" />
                       <span>Patient Outcomes</span>
                    </div>
                    <h3 className="text-2xl md:text-5xl font-bold tracking-tight">Recovery Curve</h3>
@@ -172,7 +172,7 @@ export function ClinicalPerformance({ dict }: { dict: any }) {
           <div className="glass p-6 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] border-white/10 shadow-2xl bg-white/5 backdrop-blur-3xl flex flex-col justify-between">
              <div className="flex flex-col gap-2 md:gap-3 mb-8 md:mb-14">
                 <div className="flex items-center gap-2 text-electric-cyan font-black uppercase tracking-widest text-[8px] md:text-[10px]">
-                   <ShieldCheck size={14} className="md:size-4" />
+                   <ShieldCheck size={14} className="md:size-4" aria-hidden="true" />
                    <span>Clinical Precision</span>
                 </div>
                 <h3 className="text-2xl md:text-4xl font-bold tracking-tight">Success Index</h3>
@@ -184,7 +184,10 @@ export function ClinicalPerformance({ dict }: { dict: any }) {
                 <CircularGauge value={98.5} label="Diagnostic Success" metric="Success" sublabel="AI Integrated Unit" />
              </div>
 
-             <button className="mt-10 md:mt-14 h-14 md:h-16 w-full rounded-xl md:rounded-2xl border border-royal-cobalt/30 text-royal-cobalt font-black text-[10px] md:text-xs uppercase tracking-[0.2em] hover:bg-royal-cobalt hover:text-white transition-all shadow-xl">
+             <button 
+               aria-label="View detailed 2026 clinical audit report"
+               className="mt-10 md:mt-14 h-14 md:h-16 w-full rounded-xl md:rounded-2xl border border-royal-cobalt/30 text-royal-cobalt font-black text-[10px] md:text-xs uppercase tracking-[0.2em] hover:bg-royal-cobalt hover:text-white transition-all shadow-xl"
+             >
                 Audit Report 2026
              </button>
           </div>
@@ -199,14 +202,14 @@ export function ClinicalPerformance({ dict }: { dict: any }) {
              <div key={i} className="p-6 md:p-8 glass rounded-[1.5rem] md:rounded-[2.5rem] border-white/5 bg-white/[0.02] flex items-center justify-between group hover:border-royal-cobalt/20 transition-all cursor-pointer">
                 <div className="flex items-center gap-4 md:gap-6">
                    <div className={cn("size-10 md:size-12 rounded-lg md:rounded-xl bg-white/5 flex items-center justify-center shrink-0", stat.color)}>
-                      <stat.icon size={20} className="md:size-6" />
+                      <stat.icon size={20} className="md:size-6" aria-hidden="true" />
                    </div>
                    <div>
                       <p className="text-[8px] md:text-[10px] font-black uppercase text-muted-foreground tracking-widest mb-0.5 md:mb-1">{stat.label}</p>
                       <p className="text-lg md:text-xl font-bold tracking-tight text-foreground">{stat.val}</p>
                    </div>
                 </div>
-                {i === 2 && <ArrowUpRight size={18} className="md:size-6 text-royal-cobalt group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
+                {i === 2 && <ArrowUpRight size={18} className="md:size-6 text-royal-cobalt group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />}
              </div>
            ))}
         </div>

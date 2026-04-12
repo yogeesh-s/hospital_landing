@@ -175,9 +175,12 @@ export function Hero({ dict }: HeroProps) {
                 </button>
               </Magnetic>
               
-              <button className="flex items-center gap-3 md:gap-4 text-foreground font-bold text-sm group w-full sm:w-auto justify-center sm:justify-start py-1 md:py-2">
+              <button 
+                aria-label="Watch a cinematic video tour of our elite hospital facility"
+                className="flex items-center gap-3 md:gap-4 text-foreground font-bold text-sm group w-full sm:w-auto justify-center sm:justify-start py-1 md:py-2"
+              >
                 <div className="size-10 md:size-16 rounded-full border-2 border-royal-cobalt/20 flex items-center justify-center group-hover:bg-royal-cobalt group-hover:text-white transition-all shadow-lg">
-                  <Play size={14} className="md:size-6" fill="currentColor" />
+                  <Play size={14} className="md:size-6" fill="currentColor" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col items-start leading-none text-left">
                    <span className="text-[8px] md:text-xs uppercase tracking-widest text-muted-foreground mb-1">Take a Tour</span>

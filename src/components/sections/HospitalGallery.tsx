@@ -34,7 +34,7 @@ export function HospitalGallery({ dict }: { dict: any }) {
             >
               <Image 
                 src={img}
-                alt="Modern medical equipment and facilities at Elite Hospital"
+                alt={`Medical facility interior showing ${img.split('/').pop()?.split('.')[0]?.replace('-', ' ')}`}
                 width={800}
                 height={1000}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
@@ -43,9 +43,12 @@ export function HospitalGallery({ dict }: { dict: any }) {
               />
               
               <div className="absolute inset-0 bg-royal-cobalt/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                 <div className="size-12 md:size-16 rounded-full bg-white text-royal-cobalt flex items-center justify-center scale-50 group-hover:scale-100 transition-transform duration-500 shadow-2xl">
+                 <button 
+                  aria-label="View full size image"
+                  className="size-12 md:size-16 rounded-full bg-white text-royal-cobalt flex items-center justify-center scale-50 group-hover:scale-100 transition-transform duration-500 shadow-2xl"
+                 >
                     <Maximize2 size={20} className="md:size-6" aria-hidden="true" />
-                 </div>
+                 </button>
               </div>
             </motion.div>
           ))}

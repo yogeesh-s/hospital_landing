@@ -39,7 +39,7 @@ export function AboutHospital({ dict }: { dict: any }) {
                     </div>
                     <div className="flex flex-col gap-1">
                        <span className="text-royal-cobalt font-black text-[10px] md:text-sm tracking-widest">{milestone.year}</span>
-                       <h4 className="text-base md:text-xl font-bold leading-tight">{milestone.title}</h4>
+                       <h3 className="text-base md:text-xl font-bold leading-tight">{milestone.title}</h3>
                        <p className="text-[11px] md:text-sm text-muted-foreground leading-relaxed">{milestone.description}</p>
                     </div>
                  </motion.div>
@@ -52,10 +52,11 @@ export function AboutHospital({ dict }: { dict: any }) {
                <div className="relative aspect-[4/3] sm:aspect-square rounded-[2rem] md:rounded-[4rem] overflow-hidden border-[6px] md:border-[12px] border-white/5 shadow-2xl">
                   <Image 
                     src="/assets/images/sections/about-lobby.jpg"
-                    alt="Elite Hospital Vision"
+                    alt="Elite Hospital Visionary Lobby and Patient Care Center"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                     className="object-cover"
+                    quality={85}
                   />
                   <div className="absolute inset-0 bg-linear-to-tr from-royal-cobalt/40 via-transparent to-transparent" />
                </div>
@@ -68,9 +69,9 @@ export function AboutHospital({ dict }: { dict: any }) {
                >
                   <div className="flex flex-col gap-4">
                      <div className="size-12 rounded-2xl bg-royal-cobalt text-white flex items-center justify-center">
-                        <Target size={24} />
+                        <Target size={24} aria-hidden="true" />
                      </div>
-                     <h5 className="font-bold text-lg">Our Mission</h5>
+                     <div className="font-bold text-lg">Our Mission</div>
                      <p className="text-xs text-muted-foreground leading-relaxed">Providing zero-compromise clinical excellence through AI and human compassion.</p>
                   </div>
                </motion.div>
@@ -83,9 +84,9 @@ export function AboutHospital({ dict }: { dict: any }) {
                >
                   <div className="flex flex-col gap-4">
                      <div className="size-12 rounded-2xl bg-electric-cyan/20 text-electric-cyan-700 flex items-center justify-center">
-                        <Heart size={24} />
+                        <Heart size={24} aria-hidden="true" />
                      </div>
-                     <h5 className="font-bold text-lg">Patient First</h5>
+                     <div className="font-bold text-lg">Patient First</div>
                      <p className="text-xs text-muted-foreground leading-relaxed">Healing is a journey we walk alongside our patients, every step of the way.</p>
                   </div>
                </motion.div>
@@ -95,16 +96,16 @@ export function AboutHospital({ dict }: { dict: any }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:hidden gap-4 mt-4">
                <div className="glass p-6 rounded-[2rem] shadow-xl border-white/10 flex flex-col gap-3">
                   <div className="size-10 rounded-xl bg-royal-cobalt text-white flex items-center justify-center">
-                     <Target size={20} />
+                     <Target size={20} aria-hidden="true" />
                   </div>
-                  <h5 className="font-bold text-base md:text-lg">Our Mission</h5>
+                  <div className="font-bold text-base md:text-lg">Our Mission</div>
                   <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed">Providing zero-compromise clinical excellence through AI and human compassion.</p>
                </div>
                <div className="glass p-6 rounded-[2rem] shadow-xl border-white/10 flex flex-col gap-3">
                   <div className="size-10 rounded-xl bg-electric-cyan/20 text-electric-cyan-700 flex items-center justify-center">
-                     <Heart size={20} />
+                     <Heart size={20} aria-hidden="true" />
                   </div>
-                  <h5 className="font-bold text-base md:text-lg">Patient First</h5>
+                  <div className="font-bold text-base md:text-lg">Patient First</div>
                   <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed">Healing is a journey we walk alongside our patients, every step of the way.</p>
                </div>
             </div>

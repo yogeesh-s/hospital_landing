@@ -17,9 +17,20 @@ All generated files must strictly adhere to this map:
 - **Dynamic SSG:** Uses `generateStaticParams` to pre-render all language versions at build time for instant performance.
 - **Advanced SEO Mandates:**
     - **Metadata API:** Unique, localized meta titles and descriptions injected via `generateMetadata`.
-    - **Hospital Schema:** Integrated **JSON-LD Hospital Structured Data** in `layout.tsx` for clinical search ranking authority (address, geo-coordinates, emergency status).
+    - **Metadata Base:** Root `layout.tsx` MUST define `metadataBase` to resolve social images correctly.
+    - **Hospital Schema:** Integrated **JSON-LD Hospital Structured Data** in `layout.tsx` for clinical search ranking authority.
     - **Language Alternates:** Proper `hreflang` link tags in the `<head>` for global search ranking authority.
-    - **Semantic Markup:** Strict use of `<main>`, `<article>`, `<section>`, and hierarchical heading structures (`h1` through `h4`).
+    - **Semantic Markup:** Strict use of `<main>`, `<article>`, `<section>`, and hierarchical heading structures. **Strictly one `h1` per page.**
+    - **Metadata Routes:** `robots.ts` and `sitemap.ts` MUST include `export const dynamic = 'force-static'` for static exports.
+
+## ⚡ Performance & Accessibility (Core Web Vitals)
+- **LCP Optimization:** The primary Hero image MUST use `priority` and `fetchPriority="high"`. Avoid entrance animations (opacity/scale) on the LCP element itself.
+- **Responsive Images:** EVERY `<Image />` component MUST include a `sizes` attribute (e.g., `sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"`) to prevent over-fetching.
+- **Accessibility (A11y):** 
+    - **Interactive Labels:** All `<button>` or `<Link>` elements without visible text MUST have a descriptive `aria-label`.
+    - **Decorative Assets:** All purely decorative icons (Lucide) MUST have `aria-hidden="true"`.
+    - **Heading Order:** Maintain strict logical heading hierarchy (`h1` -> `h2` -> `h3`).
+- **Main Thread Efficiency:** Heavy client-side interactive components (like `CustomCursor`) MUST only initialize on devices with a fine pointer (`matchMedia("(pointer: fine)")`).
 
 ## 🎨 Global Design System (Oceanic Trust)
 - **Palette:** 
@@ -31,24 +42,20 @@ All generated files must strictly adhere to this map:
 - **Typography Architecture:** 
     - **Headings:** Standardized **`text-8xl`** (desktop) and **`text-4xl`** (mobile) font-semibold with `tracking-tighter`.
     - **Signature Style:** Use `<span className="text-gradient-primary italic pr-4">Word</span>` for secondary words.
-    - **Adaptive Grid Titles:** Titles scale dynamically (`text-2xl` mobile to `text-4xl` desktop) to prevent overflow.
 - **Branding Signature:** Always include "Developed by **Vorabbit**" in the footer bottom bar with cobalt styling.
 
 ## ✨ Advanced Interaction & Micro-Animations
 - **Global Transition:** **Spring physics only** (`stiffness: 260, damping: 20`). 
 - **Clinical Cursor Engine:**
     - **Physicality:** Surgical crosshair core with spring-following pulse ring and heartbeat (EKG) animation on hover.
-    - **Data HUD:** Floating clinical micro-metrics (BPM, Unit ID) following the cursor.
-    - **Zero-Arrow Standard:** Default browser cursor is suppressed globally (`lg:cursor-none`).
+    - **Pointer Guard:** Suppress default browser cursor (`lg:cursor-none`) only on desktop/fine-pointer devices.
 - **Section Intelligence:**
     - **Anatomical Mapping:** Persistent 3D mannequin with pixel-perfect hotspots and persistent department selection.
     - **Diagnostic Terminal:** 3D perspective transitions with orbital scanning rings and high-transparency glass data nodes.
-    - **Specialist Carousel:** Auto-scrolling grid (paused on hover) with 3D tilt profiles and hover-to-reveal clinical metrics.
-    - **Performance Metrics:** Real-time animated SVG line graphs and radial dash-offset gauges.
 
 ## 🧱 Static Export (SSG) Technical Rules
 - **Directives:** Interactive components MUST use `"use client"`.
-- **Image Optimization:** All images are optimized via the custom loader (`src/lib/image-loader.js`). Do NOT use `unoptimized: true` in component code; let the global config handle path-prefixing and optimization.
+- **Image Optimization:** All images are optimized via the custom loader (`src/lib/image-loader.js`). Do NOT use `unoptimized: true` in component code.
 - **Data Architecture:** No hardcoded content in sections. All strings come from dictionaries; all structured data lives in `src/lib/data.ts`.
 - **Vertical Rhythm:** Standardized vertical padding: **`py-16` (mobile)** and **`py-32` (desktop)**.
 - **Type Safety:** 100% Strict TypeScript. No `any` types.

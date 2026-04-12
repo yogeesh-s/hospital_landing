@@ -87,15 +87,18 @@ export function FaqAndAssistant({ dict }: { dict: any }) {
               <div className="bg-royal-cobalt p-5 md:p-6 text-white flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="size-8 md:size-10 rounded-lg md:rounded-xl bg-white/20 flex items-center justify-center">
-                    <Bot size={20} className="md:size-6" />
+                    <Bot size={20} className="md:size-6" aria-hidden="true" />
                   </div>
                   <div>
                     <h4 className="font-bold text-sm md:text-base">Elite Assistant</h4>
                     <p className="text-[8px] md:text-[10px] opacity-80 uppercase tracking-widest">Always Online</p>
                   </div>
                 </div>
-                <button onClick={() => setIsChatOpen(false)}>
-                  <X size={18} className="md:size-5" />
+                <button 
+                  onClick={() => setIsChatOpen(false)}
+                  aria-label="Close chat assistant"
+                >
+                  <X size={18} className="md:size-5" aria-hidden="true" />
                 </button>
               </div>
               
@@ -111,8 +114,11 @@ export function FaqAndAssistant({ dict }: { dict: any }) {
                   placeholder="Ask a question..." 
                   className="flex-1 bg-transparent text-xs md:text-sm focus:outline-none text-foreground"
                 />
-                <button className="size-8 md:size-10 rounded-lg md:rounded-xl bg-royal-cobalt text-white flex items-center justify-center">
-                  <Send size={14} className="md:size-4.5" />
+                <button 
+                  className="size-8 md:size-10 rounded-lg md:rounded-xl bg-royal-cobalt text-white flex items-center justify-center"
+                  aria-label="Send message"
+                >
+                  <Send size={14} className="md:size-4.5" aria-hidden="true" />
                 </button>
               </div>
             </motion.div>
@@ -123,9 +129,10 @@ export function FaqAndAssistant({ dict }: { dict: any }) {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsChatOpen(!isChatOpen)}
+          aria-label={isChatOpen ? "Close AI health assistant" : "Open AI health assistant"}
           className="size-14 md:size-16 rounded-full bg-royal-cobalt text-white shadow-[0_20px_40px_rgba(37,99,235,0.3)] flex items-center justify-center"
         >
-          {isChatOpen ? <X size={24} className="md:size-7" /> : <MessageCircle size={24} className="md:size-7" />}
+          {isChatOpen ? <X size={24} className="md:size-7" aria-hidden="true" /> : <MessageCircle size={24} className="md:size-7" aria-hidden="true" />}
         </motion.button>
       </div>
     </section>

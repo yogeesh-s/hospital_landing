@@ -140,6 +140,7 @@ export function DiagnosticLabs({ dict }: { dict: any }) {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1000px"
                   loading="lazy"
                   className="object-cover opacity-20 dark:opacity-70 scale-125 transition-transform duration-[5000ms]"
+                  quality={85}
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/40 to-background" />
 
@@ -192,7 +193,10 @@ export function DiagnosticLabs({ dict }: { dict: any }) {
                          </div>
                       </div>
                       
-                      <button className="w-full sm:w-auto h-10 sm:h-14 md:h-16 px-4 sm:px-8 md:px-10 rounded-lg sm:rounded-xl md:rounded-2xl bg-royal-cobalt text-white font-black text-[7px] sm:text-[9px] md:text-[11px] uppercase tracking-[0.2em] shadow-xl hover:bg-slate-900 transition-all active:scale-95 whitespace-nowrap">
+                      <button 
+                        aria-label={`Secure a slot in our ${activeService.title} laboratory`}
+                        className="w-full sm:w-auto h-10 sm:h-14 md:h-16 px-4 sm:px-8 md:px-10 rounded-lg sm:rounded-xl md:rounded-2xl bg-royal-cobalt text-white font-black text-[7px] sm:text-[9px] md:text-[11px] uppercase tracking-[0.2em] shadow-xl hover:bg-slate-900 transition-all active:scale-95 whitespace-nowrap"
+                      >
                          Secure Laboratory Slot
                       </button>
                    </div>

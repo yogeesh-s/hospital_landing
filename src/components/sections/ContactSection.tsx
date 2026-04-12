@@ -33,6 +33,7 @@ export function ContactSection({ dict }: { dict: any }) {
                className="w-full h-full border-0 grayscale invert opacity-80 group-hover:grayscale-0 group-hover:invert-0 transition-all duration-700" 
                allowFullScreen 
                loading="lazy"
+               title="Elite Medical District Location Map"
              />
           </div>
           
@@ -40,15 +41,18 @@ export function ContactSection({ dict }: { dict: any }) {
              <div className="flex flex-col gap-3 md:gap-4">
                 <div className="flex items-center gap-3">
                    <div className="size-8 md:size-10 rounded-lg md:rounded-xl bg-royal-cobalt flex items-center justify-center text-white">
-                      <Navigation size={16} className="md:size-5" />
+                      <Navigation size={16} className="md:size-5" aria-hidden="true" />
                    </div>
                    <div>
                       <p className="text-[8px] md:text-[10px] text-muted-foreground font-bold uppercase">Location</p>
                       <p className="text-xs md:text-sm font-bold">Elite Medical District</p>
                    </div>
                 </div>
-                <button className="h-8 md:h-10 px-3 md:px-4 rounded-lg md:rounded-xl bg-royal-cobalt text-white text-[10px] md:text-xs font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors">
-                   Get Directions <ExternalLink size={12} className="md:size-3.5" />
+                <button 
+                  aria-label="Get Directions to Elite Medical District on Google Maps"
+                  className="h-8 md:h-10 px-3 md:px-4 rounded-lg md:rounded-xl bg-royal-cobalt text-white text-[10px] md:text-xs font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors"
+                >
+                   Get Directions <ExternalLink size={12} className="md:size-3.5" aria-hidden="true" />
                 </button>
              </div>
           </div>

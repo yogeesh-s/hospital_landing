@@ -203,9 +203,12 @@ export function InteractiveBodyMap({ dict }: { dict: any }) {
                   </div>
 
                   <div className="flex flex-col gap-4 mt-2 md:mt-auto pt-4 md:pt-6 border-t border-white/5">
-                    <button className="h-14 md:h-16 w-full rounded-xl md:rounded-2xl bg-royal-cobalt text-white font-bold text-sm md:text-lg flex items-center justify-center gap-2 md:gap-3 hover:scale-[1.02] transition-all active:scale-[0.98] shadow-xl">
+                    <button 
+                      aria-label={`Book appointment for ${activePart.name} specialization`}
+                      className="h-14 md:h-16 w-full rounded-xl md:rounded-2xl bg-royal-cobalt text-white font-bold text-sm md:text-lg flex items-center justify-center gap-2 md:gap-3 hover:scale-[1.02] transition-all active:scale-[0.98] shadow-xl"
+                    >
                       Book Specialization
-                      <ChevronRight size={16} className="md:size-5" />
+                      <ChevronRight size={16} className="md:size-5" aria-hidden="true" />
                     </button>
                   </div>
                 </motion.div>

@@ -89,12 +89,12 @@ function DoctorCard({ doctor }: { doctor: typeof specialists[0] }) {
                 </p>
               </div>
 
-              <AnimatePresence>
-                {isHovered && (
-                  <motion.div 
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
+                    <motion.div 
+                    initial={{ opacity: 0, scaleY: 0 }}
+                    animate={{ opacity: 1, scaleY: 1 }}
+                    exit={{ opacity: 0, scaleY: 0 }}
+                    transition={{ duration: 0.3 }}
+                    style={{ originY: 0 }}
                     className="flex flex-col gap-4 md:gap-6 overflow-hidden pt-4 border-t border-white/10"
                   >
                     <div className="grid grid-cols-2 gap-4 md:gap-6">
@@ -122,13 +122,14 @@ function DoctorCard({ doctor }: { doctor: typeof specialists[0] }) {
                        ))}
                     </div>
 
-                    <button className="h-10 md:h-14 w-full rounded-lg md:rounded-2xl bg-white text-slate-950 font-black text-[9px] md:text-xs uppercase tracking-[0.2em] shadow-2xl flex items-center justify-center gap-2 md:gap-3 hover:bg-royal-cobalt hover:text-white transition-all active:scale-95">
+                    <button 
+                      aria-label={`Book a direct consultation with ${doctor.name}`}
+                      className="h-10 md:h-14 w-full rounded-lg md:rounded-2xl bg-white text-slate-950 font-black text-[9px] md:text-xs uppercase tracking-[0.2em] shadow-2xl flex items-center justify-center gap-2 md:gap-3 hover:bg-royal-cobalt hover:text-white transition-all active:scale-95"
+                    >
                        Direct Consultation
                        <Plus size={12} className="md:size-4" aria-hidden="true" />
                     </button>
                   </motion.div>
-                )}
-              </AnimatePresence>
 
               {!isHovered && (
                 <div className="flex items-center gap-4 md:gap-6 text-white/40">
