@@ -13,53 +13,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 
-const specialists = [
-  { 
-    name: "Dr. Sarah Chen", 
-    specialty: "Chief of Cardiology", 
-    qualifications: "MD, FACC, Harvard",
-    experience: "18+ Years",
-    metrics: { success: 99.4, satisfaction: 4.9 },
-    skills: ["Angioplasty", "Robotic Heart Surgery"],
-    image: "https://images.unsplash.com/photo-1559839734-2b71f1e3c770?q=80&w=2670&auto=format&fit=crop" 
-  },
-  { 
-    name: "Dr. Marcus Thorne", 
-    specialty: "Senior Neurosurgeon", 
-    qualifications: "MD, PhD, Johns Hopkins",
-    experience: "15+ Years",
-    metrics: { success: 98.2, satisfaction: 5.0 },
-    skills: ["Brain Mapping", "Neural Implants"],
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2670&auto=format&fit=crop" 
-  },
-  { 
-    name: "Dr. Elena Rodriguez", 
-    specialty: "Pediatric Director", 
-    qualifications: "MBBS, DCH, Stanford",
-    experience: "12+ Years",
-    metrics: { success: 99.9, satisfaction: 4.8 },
-    skills: ["Neonatology", "Genetic Screening"],
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=2670&auto=format&fit=crop" 
-  },
-  { 
-    name: "Dr. James Wilson", 
-    specialty: "Orthopedic Surgeon", 
-    qualifications: "MD, MS, Oxford",
-    experience: "20+ Years",
-    metrics: { success: 97.5, satisfaction: 4.9 },
-    skills: ["Total Hip Replacement", "Sports Med"],
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2670&auto=format&fit=crop" 
-  },
-  { 
-    name: "Dr. Amara Okafor", 
-    specialty: "Oncology Lead", 
-    qualifications: "MD, DM, Yale Health",
-    experience: "14+ Years",
-    metrics: { success: 96.8, satisfaction: 5.0 },
-    skills: ["Immunotherapy", "Targeted Therapy"],
-    image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=2670&auto=format&fit=crop" 
-  },
-]
+import { specialists } from "@/lib/data"
 
 function DoctorCard({ doctor }: { doctor: typeof specialists[0] }) {
   const [isHovered, setIsHovering] = useState(false)

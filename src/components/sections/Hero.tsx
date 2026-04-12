@@ -85,7 +85,7 @@ export function Hero({ dict }: HeroProps) {
   const activeCard = rotatingCards[cardIndex]
 
   return (
-    <section ref={containerRef} className="relative min-h-screen lg:h-screen flex flex-col items-center justify-start lg:justify-center px-6 overflow-x-hidden pt-28 md:pt-32 pb-12 md:pb-20">
+    <section ref={containerRef} className="relative w-full h-auto lg:h-screen lg:min-h-[800px] flex flex-col items-center justify-start lg:justify-center px-4 md:px-6 pt-24 md:pt-32 pb-16 md:pb-20 overflow-x-clip">
       <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--color-royal-cobalt)_0%,transparent_100%)] opacity-[0.03]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -97,7 +97,7 @@ export function Hero({ dict }: HeroProps) {
             opacity: [0.05, 0.08, 0.05]
           }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[20%] -left-[10%] size-[400px] md:size-[800px] bg-royal-cobalt rounded-full blur-[100px] md:blur-[150px]"
+          className="absolute -top-[20%] -left-[10%] size-[300px] md:size-[800px] bg-royal-cobalt rounded-full blur-[80px] md:blur-[150px]"
         />
         <motion.div 
           animate={{ 
@@ -106,34 +106,34 @@ export function Hero({ dict }: HeroProps) {
             opacity: [0.03, 0.06, 0.03]
           }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-[20%] -right-[10%] size-[400px] md:size-[800px] bg-electric-cyan rounded-full blur-[100px] md:blur-[150px]"
+          className="absolute -bottom-[20%] -right-[10%] size-[300px] md:size-[800px] bg-electric-cyan rounded-full blur-[80px] md:blur-[150px]"
         />
       </div>
 
-      <div className="max-w-[1400px] w-full grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 md:gap-20 items-center relative z-10">
-        <motion.div style={{ opacity, scale }} className="flex flex-col gap-8 md:gap-12">
-          <div className="flex flex-col gap-6 md:gap-8">
+      <div className="max-w-[1400px] w-full grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 md:gap-20 items-center relative z-10">
+        <motion.div style={{ opacity, scale }} className="flex flex-col gap-6 md:gap-12 w-full">
+          <div className="flex flex-col gap-4 md:gap-8 w-full">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-2 w-fit px-4 py-1.5 rounded-full bg-royal-cobalt/5 border border-royal-cobalt/20 backdrop-blur-md"
+              className="flex items-center gap-2 w-fit px-3 py-1 rounded-full bg-royal-cobalt/5 border border-royal-cobalt/20 backdrop-blur-md"
             >
-              <span className="relative flex h-2 w-2">
+              <span className="relative flex h-1.5 w-1.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-royal-cobalt opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-royal-cobalt"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-royal-cobalt"></span>
               </span>
-              <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-royal-cobalt">Precision in Every Heartbeat</span>
+              <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] text-royal-cobalt">Precision in Every Heartbeat</span>
             </motion.div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full gap-1 md:gap-2">
               <Reveal delay={0.1}>
-                <h1 className="text-4xl md:text-8xl font-semibold tracking-tighter leading-[0.9] md:leading-[0.85] text-slate-900 dark:text-white">
+                <h1 className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-slate-900 dark:text-white">
                   {dict.hero.title_part1}
                 </h1>
               </Reveal>
-              <div className="flex items-center gap-4 md:gap-6 mt-1 md:mt-2">
+              <div className="flex items-center gap-3 md:gap-6">
                  <Reveal delay={0.3}>
-                   <h1 className="text-4xl md:text-8xl font-semibold tracking-tighter leading-[0.9] md:leading-[0.85] text-gradient-primary">
+                   <h1 className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-gradient-primary">
                      {dict.hero.title_part2}
                    </h1>
                  </Reveal>
@@ -151,7 +151,7 @@ export function Hero({ dict }: HeroProps) {
                  </motion.div>
               </div>
               <Reveal delay={0.5}>
-                <h1 className="text-4xl md:text-8xl font-semibold tracking-tighter leading-[0.9] md:leading-[0.85] text-slate-900 dark:text-white">
+                <h1 className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-slate-900 dark:text-white">
                   {dict.hero.title_part3}
                 </h1>
               </Reveal>
@@ -161,33 +161,33 @@ export function Hero({ dict }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="max-w-xl text-base md:text-2xl text-muted-foreground leading-relaxed font-medium"
+              className="w-full lg:max-w-xl text-sm md:text-2xl text-muted-foreground leading-relaxed font-medium"
             >
               Experience the Top 1% of Global Healthcare. Powered by AI diagnostics and compassionate specialists.
             </motion.p>
           </div>
 
-          <div className="flex flex-col gap-6 md:gap-10">
+          <div className="flex flex-col gap-6 md:gap-10 w-full">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
-              className="flex flex-col sm:flex-row items-center gap-4 md:gap-8"
+              className="flex flex-col sm:flex-row items-center gap-4 md:gap-8 w-full"
             >
-              <Magnetic strength={0.2}>
-                <button className="w-full sm:w-auto h-14 md:h-20 px-8 md:px-12 rounded-2xl md:rounded-3xl bg-royal-cobalt text-white font-bold text-base md:text-xl shadow-[0_20px_40px_-12px_rgba(37,99,235,0.4)] flex items-center justify-center gap-4 group hover:bg-slate-900 transition-all active:scale-95">
+              <Magnetic strength={0.2} className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto h-12 md:h-20 px-6 md:px-12 rounded-xl md:rounded-3xl bg-royal-cobalt text-white font-bold text-sm md:text-xl shadow-[0_20px_40px_-12px_rgba(37,99,235,0.4)] flex items-center justify-center gap-3 md:gap-4 group hover:bg-slate-900 transition-all active:scale-95">
                   {dict.hero.cta_primary}
-                  <ArrowUpRight size={18} className="md:size-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  <ArrowUpRight size={16} className="md:size-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
               </Magnetic>
               
-              <button className="flex items-center gap-4 text-foreground font-bold text-base group w-full sm:w-auto justify-center sm:justify-start py-2">
-                <div className="size-12 md:size-16 rounded-full border-2 border-royal-cobalt/20 flex items-center justify-center group-hover:bg-royal-cobalt group-hover:text-white transition-all shadow-lg">
-                  <Play size={18} className="md:size-6" fill="currentColor" />
+              <button className="flex items-center gap-3 md:gap-4 text-foreground font-bold text-sm group w-full sm:w-auto justify-center sm:justify-start py-1 md:py-2">
+                <div className="size-10 md:size-16 rounded-full border-2 border-royal-cobalt/20 flex items-center justify-center group-hover:bg-royal-cobalt group-hover:text-white transition-all shadow-lg">
+                  <Play size={14} className="md:size-6" fill="currentColor" />
                 </div>
-                <div className="flex flex-col items-start leading-none">
-                   <span className="text-[9px] md:text-xs uppercase tracking-widest text-muted-foreground mb-1">Take a Tour</span>
-                   <span className="text-sm md:text-lg">Elite Facility</span>
+                <div className="flex flex-col items-start leading-none text-left">
+                   <span className="text-[8px] md:text-xs uppercase tracking-widest text-muted-foreground mb-1">Take a Tour</span>
+                   <span className="text-xs md:text-lg">Elite Facility</span>
                 </div>
               </button>
             </motion.div>
@@ -196,35 +196,35 @@ export function Hero({ dict }: HeroProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
-              className="grid grid-cols-3 gap-2 md:gap-12 py-6 md:py-8 border-y border-muted/50"
+              className="grid grid-cols-3 gap-1.5 md:gap-12 py-4 md:py-8 border-y border-muted/50 w-full"
             >
-               <div className="flex flex-col gap-1 items-center md:items-start text-center md:text-left">
+               <div className="flex flex-col gap-0.5 md:gap-1 items-center md:items-start text-center md:text-left">
                   <div className="flex items-center gap-1 md:gap-2 text-royal-cobalt">
-                     <ShieldCheck size={14} className="text-electric-cyan md:size-5 shrink-0" />
-                     <span className="font-bold text-xs md:text-xl whitespace-nowrap">JCI GOLD</span>
+                     <ShieldCheck size={12} className="text-electric-cyan md:size-5 shrink-0" />
+                     <span className="font-bold text-[10px] md:text-xl whitespace-nowrap">JCI GOLD</span>
                   </div>
-                  <p className="text-[7px] md:text-[10px] uppercase font-bold text-muted-foreground tracking-tighter md:tracking-widest">Global Safety</p>
+                  <p className="text-[6px] md:text-[10px] uppercase font-bold text-muted-foreground tracking-tighter md:tracking-widest">Global Safety</p>
                </div>
-               <div className="flex flex-col gap-1 items-center md:items-start text-center md:text-left">
+               <div className="flex flex-col gap-0.5 md:gap-1 items-center md:items-start text-center md:text-left">
                   <div className="flex items-center gap-1 md:gap-2 text-royal-cobalt">
-                     <Star size={14} className="text-yellow-500 fill-yellow-500 md:size-5 shrink-0" />
-                     <span className="font-bold text-xs md:text-xl whitespace-nowrap">4.9/5 Rating</span>
+                     <Star size={12} className="text-yellow-500 fill-yellow-500 md:size-5 shrink-0" />
+                     <span className="font-bold text-[10px] md:text-xl whitespace-nowrap">4.9/5 Rating</span>
                   </div>
-                  <p className="text-[7px] md:text-[10px] uppercase font-bold text-muted-foreground tracking-tighter md:tracking-widest">Patient Trust</p>
+                  <p className="text-[6px] md:text-[10px] uppercase font-bold text-muted-foreground tracking-tighter md:tracking-widest">Patient Trust</p>
                </div>
-               <div className="flex flex-col gap-1 items-center md:items-start text-center md:text-left">
+               <div className="flex flex-col gap-0.5 md:gap-1 items-center md:items-start text-center md:text-left">
                   <div className="flex items-center gap-1 md:gap-2 text-royal-cobalt">
-                     <Zap size={14} className="text-royal-cobalt md:size-5 shrink-0" />
-                     <span className="font-bold text-xs md:text-xl whitespace-nowrap">8m Res.</span>
+                     <Zap size={12} className="text-royal-cobalt md:size-5 shrink-0" />
+                     <span className="font-bold text-[10px] md:text-xl whitespace-nowrap">8m Res.</span>
                   </div>
-                  <p className="text-[7px] md:text-[10px] uppercase font-bold text-muted-foreground tracking-tighter md:tracking-widest">Emergency</p>
+                  <p className="text-[6px] md:text-[10px] uppercase font-bold text-muted-foreground tracking-tighter md:tracking-widest">Emergency</p>
                </div>
             </motion.div>
           </div>
         </motion.div>
 
         <div className="relative flex justify-center lg:justify-end mt-12 lg:mt-0 w-full">
-          <motion.div style={{ y: y1 }} className="relative z-10 w-full max-w-[400px] lg:max-w-[600px]">
+          <motion.div style={{ y: y1 }} className="relative z-10 w-full lg:max-w-[600px]">
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}

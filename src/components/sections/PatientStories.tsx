@@ -4,29 +4,7 @@ import { motion } from "motion/react"
 import { Quote, PlayCircle, Star } from "lucide-react"
 import Image from "next/image"
 
-const testimonials = [
-  {
-    name: "Johnathan Blake",
-    story: "The cardiology department at Elite Hospital saved my life. The specialists were incredibly thorough and compassionate throughout my recovery journey.",
-    department: "Cardiology Patient",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2670&auto=format&fit=crop"
-  },
-  {
-    name: "Meera Deshmukh",
-    story: "I had a complicated pregnancy, but the maternity team was world-class. They made me feel safe and cared for every step of the way.",
-    department: "Maternity Patient",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=2670&auto=format&fit=crop"
-  },
-  {
-    name: "Robert Langdon",
-    story: "After my knee surgery, the orthopedic rehab team helped me get back on my feet faster than I ever expected. Truly elite care.",
-    department: "Orthopedics Patient",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=2670&auto=format&fit=crop"
-  }
-]
+import { testimonials } from "@/lib/data"
 
 export function PatientStories({ dict }: { dict: any }) {
   return (
