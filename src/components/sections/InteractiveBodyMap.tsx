@@ -22,7 +22,7 @@ const bodyParts: BodyPart[] = [
     name: "Neurology", 
     icon: Brain, 
     description: "Advanced care for brain and nervous system disorders.", 
-    image: "https://images.unsplash.com/photo-1559757175-5700da8a5dba?q=80&w=2670&auto=format&fit=crop",
+    image: "/assets/images/departments/neurology.jpeg",
     x: "50%", 
     y: "15%" 
   },
@@ -31,7 +31,7 @@ const bodyParts: BodyPart[] = [
     name: "Ophthalmology", 
     icon: Eye, 
     description: "Leading-edge vision care and ophthalmic surgery.", 
-    image: "https://images.unsplash.com/photo-1581595224492-38ff19ae3694?q=80&w=2670&auto=format&fit=crop",
+    image: "/assets/images/departments/ophthalmology.jpeg",
     x: "48%", 
     y: "18%" 
   },
@@ -40,7 +40,7 @@ const bodyParts: BodyPart[] = [
     name: "Pulmonology", 
     icon: Activity, 
     description: "Specialized care for respiratory health and lung diseases.", 
-    image: "https://images.unsplash.com/photo-1584017945516-19b2133f606d?q=80&w=2670&auto=format&fit=crop",
+    image: "/assets/images/gallery/patient-room.jpeg",
     x: "55%", 
     y: "35%" 
   },
@@ -49,7 +49,7 @@ const bodyParts: BodyPart[] = [
     name: "Cardiology", 
     icon: Heart, 
     description: "Expert diagnosis and treatment of cardiovascular conditions.", 
-    image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2670&auto=format&fit=crop",
+    image: "/assets/images/departments/cardiology.jpeg",
     x: "45%", 
     y: "35%" 
   },
@@ -58,7 +58,7 @@ const bodyParts: BodyPart[] = [
     name: "Gastroenterology", 
     icon: Droplets, 
     description: "Comprehensive digestive health and organ care focusing on minimally invasive diagnostics.", 
-    image: "https://images.unsplash.com/photo-1579154235602-3c75a171d994?q=80&w=2670&auto=format&fit=crop",
+    image: "/assets/images/sections/about-lobby.jpg",
     x: "50%", 
     y: "48%" 
   },
@@ -67,7 +67,7 @@ const bodyParts: BodyPart[] = [
     name: "Maternity", 
     icon: Baby, 
     description: "Full-spectrum care for mothers and newborns in a supportive environment.", 
-    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=2670&auto=format&fit=crop",
+    image: "/assets/images/departments/pediatrics.jpeg",
     x: "50%", 
     y: "65%" 
   },
@@ -97,7 +97,7 @@ export function InteractiveBodyMap({ dict }: { dict: any }) {
           <div className="relative flex justify-center h-[350px] sm:h-[450px] md:h-[750px] w-full max-w-[600px] mx-auto">
             <div className="relative w-full h-full rounded-[2rem] md:rounded-[3.5rem] overflow-hidden bg-slate-900 shadow-[0_0_50px_rgba(37,99,235,0.15)] group/map border border-white/5">
               <Image 
-                src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?q=80&w=2670&auto=format&fit=crop"
+                src="/assets/images/sections/diagnostics-lab.avif"
                 alt="Realistic Human Anatomy 3D"
                 fill
                 className="object-cover opacity-70 mix-blend-screen transition-transform duration-1000 group-hover/map:scale-105"

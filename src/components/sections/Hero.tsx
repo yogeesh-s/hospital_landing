@@ -233,7 +233,7 @@ export function Hero({ dict }: HeroProps) {
               className="relative w-full aspect-[4/5] rounded-[2.5rem] md:rounded-[5rem] overflow-hidden shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)] md:shadow-[0_80px_150px_-20px_rgba(0,0,0,0.3)] border-[6px] md:border-[12px] border-white/5 backdrop-blur-md"
             >
               <Image 
-                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2670&auto=format&fit=crop"
+                src="/assets/images/hero/hero-main.jpeg"
                 alt="Elite Hospital Modern Aesthetic"
                 fill
                 className="object-cover"
