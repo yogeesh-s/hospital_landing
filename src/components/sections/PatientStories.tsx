@@ -63,7 +63,7 @@ export function PatientStories({ dict }: { dict: any }) {
                 </p>
               </div>
               <div className="flex flex-col">
-                <h4 className="font-bold text-base md:text-lg tracking-tight">{t.name}</h4>
+                <h3 className="font-bold text-base md:text-lg tracking-tight">{t.name}</h3>
                 <p className="text-[8px] md:text-xs text-royal-cobalt font-bold tracking-widest uppercase">{t.department}</p>
               </div>
             </div>

@@ -2,6 +2,7 @@
 
 import { useRef } from "react"
 import { motion } from "motion/react"
+import { useMediaQuery } from "@/hooks/use-media-query"
 
 interface RevealProps {
   children: React.ReactNode
@@ -9,16 +10,29 @@ interface RevealProps {
   delay?: number
 }
 
-export function Reveal({ children, width = "fit-content", delay = 0.25 }: RevealProps) {
+export function Reveal({
+  children,
+  width = "fit-content",
+  delay = 0.25,
+}: RevealProps) {
   const ref = useRef(null)
+  const isDesktop = useMediaQuery("(min-width: 768px)")
+
+  const variants = {
+    hidden: {
+      opacity: 0,
+      translateY: isDesktop ? "75px" : "0px",
+    },
+    visible: {
+      opacity: 1,
+      translateY: "0px",
+    },
+  }
 
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
       <motion.div
-        variants={{
-          hidden: { opacity: 0, translateY: "75px" },
-          visible: { opacity: 1, translateY: "0px" },
-        }}
+        variants={variants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}

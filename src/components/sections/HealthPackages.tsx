@@ -81,7 +81,9 @@ export function HealthPackages({ dict }: { dict: any }) {
                    ))}
                 </div>
 
-                <button className={cn(
+                <button
+  aria-label={`Book the ${pkg.title} package`}
+  className={cn(
                   "mt-auto h-12 md:h-14 w-full rounded-xl md:rounded-2xl font-bold text-[10px] md:text-sm uppercase tracking-widest transition-all flex items-center justify-center gap-2 md:gap-3",
                   pkg.popular 
                     ? "bg-royal-cobalt text-white shadow-xl hover:scale-[1.02]" 

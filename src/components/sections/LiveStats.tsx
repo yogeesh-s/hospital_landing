@@ -17,7 +17,12 @@ interface StatCardProps {
 
 function StatCard({ value, suffix = "", label, icon: Icon, delay = 0, color, id }: StatCardProps) {
   const [count, setCount] = useState(0)
-  const [randomData, setRandomData] = useState<number[]>([])
+  const [randomData] = useState<number[]>(() => 
+    typeof window !== "undefined" ? Array.from({ length: 12 }, () => Math.floor(Math.random() * 40) + 10) : []
+  )
+  const [randomId] = useState<number | null>(() => 
+    typeof window !== "undefined" ? Math.floor(Math.random() * 100) : null
+  )
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -30,12 +35,9 @@ function StatCard({ value, suffix = "", label, icon: Icon, delay = 0, color, id 
         onUpdate: (latest) => setCount(Math.floor(latest)),
       })
       
-      // Generate random sparkline data
-      setRandomData(Array.from({ length: 12 }, () => Math.floor(Math.random() * 40) + 10))
-      
       return () => controls.stop()
     }
-  }, [isInView, value, delay])
+  }, [isInView, value, delay, randomId])
 
   return (
     <motion.div
@@ -71,7 +73,11 @@ function StatCard({ value, suffix = "", label, icon: Icon, delay = 0, color, id 
                  <span className="text-[6px] md:text-[7px] font-black uppercase tracking-widest text-royal-cobalt">Stream</span>
                  <div className="size-1 bg-green-500 rounded-full animate-pulse" />
               </div>
-              <span className="text-[6px] md:text-[7px] font-mono text-muted-foreground opacity-50 uppercase tracking-tighter">0x4F{Math.floor(Math.random()*100)}FE</span>
+              {randomId !== null && (
+                <span className="text-[6px] md:text-[7px] font-mono text-muted-foreground opacity-50 uppercase tracking-tighter">
+                  0x4F{randomId}FE
+                </span>
+              )}
            </div>
         </div>
 

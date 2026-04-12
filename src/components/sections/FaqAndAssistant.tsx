@@ -90,7 +90,7 @@ export function FaqAndAssistant({ dict }: { dict: any }) {
                     <Bot size={20} className="md:size-6" aria-hidden="true" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm md:text-base">Elite Assistant</h4>
+                    <h3 className="font-bold text-sm md:text-base">Elite Assistant</h3>
                     <p className="text-[8px] md:text-[10px] opacity-80 uppercase tracking-widest">Always Online</p>
                   </div>
                 </div>
