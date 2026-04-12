@@ -165,11 +165,11 @@ export function Navbar({ lang, dict }: NavbarProps) {
                         key={locale}
                         href={redirectedPathname(locale)}
                         className={cn(
-                          "px-4 py-2 text-xs font-black rounded-lg transition-all capitalize",
+                          "px-3 py-2 text-[10px] font-black rounded-lg transition-all",
                           lang === locale ? "bg-royal-cobalt text-white shadow-md" : "text-muted-foreground hover:text-foreground"
                         )}
                       >
-                        {locale}
+                        {locale === 'en' ? 'English' : 'ಕನ್ನಡ'}
                       </Link>
                     ))}
                   </div>
