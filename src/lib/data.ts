@@ -1,6 +1,6 @@
 import { 
   Heart, Brain, Bone, Baby, Droplets, Eye, 
-  Scan, FlaskConical, Dna, Radiation, Waves, Syringe, Activity 
+  Scan, FlaskConical, Dna, Radiation, Waves
 } from "lucide-react"
 
 export const departmentsData = [

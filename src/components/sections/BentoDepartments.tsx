@@ -1,8 +1,7 @@
 "use client"
 
-import { useRef, useState } from "react"
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react"
-import { Brain, Heart, Activity, Droplets, Baby, Eye, Bone, Microscope, ChevronRight, CheckCircle2 } from "lucide-react"
+import { ChevronRight, CheckCircle2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { departmentsData } from "@/lib/data"
