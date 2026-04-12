@@ -79,7 +79,7 @@ function StatCard({ value, suffix = "", label, icon: Icon, delay = 0, color, id 
         <div className="h-10 md:h-16 w-full opacity-30 group-hover:opacity-60 transition-opacity">
            <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 40">
               <motion.path
-                d={`M 0 35 ${randomData.map((d, i) => `L ${(i + 1) * 8.3} ${40 - d}`).join(' ')}`}
+                d={`M 0 35 ${randomData.map((d, i) => `L ${(i + 1) * 8.3} ${35 - (d * 0.6)}`).join(' ')}`}
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
@@ -89,7 +89,7 @@ function StatCard({ value, suffix = "", label, icon: Icon, delay = 0, color, id 
                 transition={{ duration: 2, delay: delay + 0.5 }}
               />
               <motion.path
-                d={`M 0 40 ${randomData.map((d, i) => `L ${(i + 1) * 8.3} ${40 - d}`).join(' ')} L 100 40 Z`}
+                d={`M 0 35 ${randomData.map((d, i) => `L ${(i + 1) * 8.3} ${35 - (d * 0.6)}`).join(' ')} L 100 40 L 0 40 Z`}
                 fill="url(#gradient-stat)"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.1 }}
@@ -214,13 +214,13 @@ export function LiveStats({ dict }: { dict: any }) {
             color="bg-royal-cobalt text-white"
           />
           <StatCard 
-            id="FLW-09"
-            value={12} 
+            id="EMR-911"
+            value={8} 
             suffix="m" 
-            label={dict.stats.wait_time} 
+            label={dict.stats.emergency} 
             icon={Clock}
             delay={0.3}
-            color="bg-electric-cyan dark:bg-electric-cyan/80 text-slate-950 dark:text-white"
+            color="bg-red-500 text-white"
           />
         </div>
 
@@ -229,7 +229,7 @@ export function LiveStats({ dict }: { dict: any }) {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6 }}
-          className="mt-10 md:mt-20 p-6 md:p-10 glass rounded-[2rem] md:rounded-[3rem] border-slate-950/10 dark:border-white/5 bg-slate-950/5 dark:bg-white/[0.02] flex flex-col md:flex-row flex-wrap justify-center items-center gap-10 md:gap-24 shadow-2xl relative overflow-hidden"
+          className="mt-10 md:mt-20 p-6 md:p-10 glass rounded-[2rem] md:rounded-[3rem] border-slate-950/10 dark:border-white/5 bg-slate-950/5 dark:bg-white/[0.02] flex flex-col md:flex-row flex-wrap justify-start md:justify-center items-start md:items-center gap-10 md:gap-24 shadow-2xl relative overflow-hidden"
         >
            {/* Scanline Effect */}
            <motion.div 
@@ -243,7 +243,7 @@ export function LiveStats({ dict }: { dict: any }) {
              { icon: Sparkles, text: "TOP 1% GLOBAL RANK", sub: "Performance Audit 2026", status: "Elite" },
              { icon: Users, text: "1.2M+ TREATED", sub: "Total Database Records", status: "Validated" }
            ].map((trust, i) => (
-             <div key={i} className="flex items-center gap-4 md:gap-6 group/item relative z-10">
+             <div key={i} className="flex items-center gap-4 md:gap-6 group/item relative z-10 w-full md:w-auto">
                 <div className="size-10 md:size-14 rounded-xl bg-royal-cobalt/10 flex items-center justify-center text-royal-cobalt shadow-lg transition-all group-hover/item:bg-royal-cobalt group-hover/item:text-white shrink-0">
                    <trust.icon size={20} className="md:size-7" />
                 </div>

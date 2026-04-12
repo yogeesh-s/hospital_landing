@@ -74,17 +74,25 @@ export function Navbar({ lang, dict }: NavbarProps) {
           <ThemeToggle />
           
           {/* Language Toggle - Desktop or slightly larger screens */}
-          <div className="hidden sm:flex items-center gap-1 bg-muted/50 p-1 rounded-lg md:rounded-xl">
+          <div className="hidden sm:flex items-center gap-1 bg-muted/30 p-1 rounded-lg md:rounded-xl border border-border/40">
             {i18n.locales.map((locale) => (
               <Link
                 key={locale}
                 href={redirectedPathname(locale)}
                 className={cn(
-                  "px-2 md:px-3 py-0.5 md:py-1 text-[10px] md:text-xs font-bold rounded-md md:rounded-lg transition-all capitalize",
-                  lang === locale ? "bg-white dark:bg-slate-900 text-royal-cobalt shadow-sm" : "text-muted-foreground hover:text-foreground"
+                  "px-2 md:px-4 py-1 md:py-1.5 text-[10px] md:text-xs font-black rounded-md md:rounded-lg transition-all flex items-center gap-2",
+                  lang === locale 
+                    ? "bg-royal-cobalt text-white shadow-md shadow-royal-cobalt/20" 
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                 )}
               >
-                {locale}
+                <span>{locale === 'en' ? 'English' : 'ಕನ್ನಡ'}</span>
+                {lang === locale && (
+                  <motion.div 
+                    layoutId="active-lang"
+                    className="size-1 rounded-full bg-white animate-pulse" 
+                  />
+                )}
               </Link>
             ))}
           </div>
