@@ -28,9 +28,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   const title = titles[lang] || titles.en
   const description = descriptions[lang] || descriptions.en
-  const url = `https://elitehospital.com/${lang}`
+  const url = `https://yogeesh-s.github.io/hospital_landing/${lang}`
 
   return {
+    metadataBase: new URL('https://yogeesh-s.github.io/hospital_landing'),
     title,
     description,
     alternates: {

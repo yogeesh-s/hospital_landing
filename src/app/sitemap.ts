@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://yogeesh-s.github.io/hospital_landing'
   const locales = ['en', 'kn']
