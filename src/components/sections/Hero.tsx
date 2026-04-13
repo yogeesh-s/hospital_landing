@@ -85,7 +85,7 @@ export function Hero({ dict }: HeroProps) {
   const activeCard = rotatingCards[cardIndex]
 
   return (
-    <section ref={containerRef} className="relative w-full h-auto lg:h-screen lg:min-h-[800px] flex flex-col items-center justify-start lg:justify-center px-4 md:px-6 pt-24 md:pt-32 pb-16 md:pb-20 overflow-x-clip">
+    <section ref={containerRef} className="relative w-full h-auto lg:h-screen lg:min-h-[800px] flex flex-col items-center justify-start lg:justify-center px-4 md:px-6 pt-32 md:pt-48 pb-16 md:pb-20 overflow-x-clip">
       <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--color-royal-cobalt)_0%,transparent_100%)] opacity-[0.03]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -116,7 +116,7 @@ export function Hero({ dict }: HeroProps) {
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-2 w-fit px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 backdrop-blur-md"
+              className="flex items-center gap-2 w-fit px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 backdrop-blur-md mb-2"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
