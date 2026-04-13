@@ -81,10 +81,18 @@ export function DiagnosticLabs({ dict }: { dict: any }) {
           <div className="flex flex-col items-start text-left gap-3 md:gap-6">
             <div className="flex items-center gap-3 text-royal-cobalt font-black uppercase tracking-[0.3em] text-[10px] md:text-xs">
                <div className="h-px w-8 md:w-12 bg-royal-cobalt" />
-               Bio-Digital Intelligence
+               Modern Diagnostics
             </div>
             <h2 className="text-4xl md:text-8xl font-semibold tracking-tighter text-foreground leading-none">
-              Precision <span className="text-gradient-primary italic pr-4">Testing</span>
+              {dict.sections.diagnostics.title.split(' ').map((word: string, i: number, arr: string[]) => (
+                <span key={i}>
+                  {i === arr.length - 1 ? (
+                    <span className="text-gradient-primary italic pr-4">{word}</span>
+                  ) : (
+                    word + ' '
+                  )}
+                </span>
+              ))}
             </h2>
             <p className="max-w-2xl text-sm md:text-xl text-muted-foreground leading-relaxed font-light">
               {dict.sections.diagnostics.subtitle}

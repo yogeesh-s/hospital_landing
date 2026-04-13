@@ -5,7 +5,6 @@ import { Navbar } from "@/components/shared/Navbar"
 import { Hero } from "@/components/sections/Hero"
 import { LiveStats } from "@/components/sections/LiveStats"
 import { AboutHospital } from "@/components/sections/AboutHospital"
-import { InteractiveBodyMap } from "@/components/sections/InteractiveBodyMap"
 import { BentoDepartments } from "@/components/sections/BentoDepartments"
 import { DiagnosticLabs } from "@/components/sections/DiagnosticLabs"
 import { HospitalEvents } from "@/components/sections/HospitalEvents"
@@ -34,7 +33,6 @@ export default async function Page({
         <Hero dict={dict} />
         <LiveStats dict={dict} />
         <AboutHospital dict={dict} />
-        <InteractiveBodyMap dict={dict} />
         <BentoDepartments dict={dict} />
         <DiagnosticLabs dict={dict} />
         <HospitalEvents dict={dict} />

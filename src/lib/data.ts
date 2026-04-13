@@ -1,126 +1,127 @@
 import { 
   Heart, Brain, Bone, Baby, Droplets, Eye, 
-  Scan, FlaskConical, Dna, Radiation, Waves
+  Scan, FlaskConical, Dna, Radiation, Waves,
+  Stethoscope, Syringe, Clipboard
 } from "lucide-react"
 
 export const departmentsData = [
   { 
-    title: "Cardiology", 
-    icon: Heart, 
-    description: "Advanced cardiac care featuring robotic-assisted surgery and 24/7 emergency response for acute cardiac events.", 
-    image: "/assets/images/departments/cardiology.jpeg",
-    services: ["Heart Failure", "Angioplasty", "Valve Repair"],
+    title: "General Medicine", 
+    icon: Stethoscope, 
+    description: "Expert diagnosis and effective treatment for fevers, infections, and all common health concerns.", 
+    image: "/assets/images/sections/about-lobby.webp",
+    services: ["Fever Treatment", "Health Checkups", "Lifestyle Diseases"],
     className: "md:col-span-2 md:row-span-2" 
   },
   { 
-    title: "Neurology", 
-    icon: Brain, 
-    description: "Comprehensive care for complex neurological disorders and spine conditions using neuro-navigation technology.", 
-    image: "/assets/images/departments/neurology.jpeg",
-    services: ["Neuro Surgery", "Epilepsy", "Stroke Unit"],
-    className: "md:col-span-1 md:row-span-1" 
-  },
-  { 
-    title: "Orthopedics", 
-    icon: Bone, 
-    description: "Specialized joint replacement and sports medicine focused on rapid recovery and precision alignment.", 
-    image: "/assets/images/departments/orthopedics.jpeg",
-    services: ["Joint Replacement", "Sports Medicine"],
+    title: "Cardiology", 
+    icon: Heart, 
+    description: "Advanced heart care and monitoring to keep your heart healthy and strong.", 
+    image: "/assets/images/departments/cardiology.jpeg",
+    services: ["Heart Monitoring", "ECG", "Cardiac Care"],
     className: "md:col-span-1 md:row-span-1" 
   },
   { 
     title: "Pediatrics", 
     icon: Baby, 
-    description: "Expert pediatric care in a child-friendly environment, from neonatal intensive care to adolescent health.", 
+    description: "Gentle and specialized care for your children, from newborn to teenagers.", 
     image: "/assets/images/departments/pediatrics.jpeg",
-    services: ["Neonatal NICU", "Pediatric Surgery"],
+    services: ["Child Vaccination", "Newborn Care", "Growth Monitoring"],
+    className: "md:col-span-1 md:row-span-1" 
+  },
+  { 
+    title: "Orthopedics", 
+    icon: Bone, 
+    description: "Expert treatment for bone fractures, joint pains, and all types of sports injuries.", 
+    image: "/assets/images/departments/orthopedics.jpeg",
+    services: ["Joint Pain", "Fracture Care", "Physiotherapy"],
     className: "md:col-span-1 md:row-span-2" 
   },
   { 
-    title: "Gastroenterology", 
+    title: "Maternity", 
     icon: Droplets, 
-    description: "Advanced digestive healthcare using minimally invasive endoscopic and laparoscopic techniques.", 
+    description: "Safe and comfortable birthing experiences for mothers in a caring environment.", 
     image: "/assets/images/sections/about-lobby.webp",
-    services: ["Endoscopy", "Liver Care", "Bariatrics"],
+    services: ["Painless Delivery", "Prenatal Care", "Postnatal Support"],
     className: "md:col-span-1 md:row-span-2" 
   },
   { 
-    title: "Ophthalmology", 
-    icon: Eye, 
-    description: "Cutting-edge vision correction and laser eye surgeries performed by renowned ophthalmic surgeons.", 
-    image: "/assets/images/departments/ophthalmology.jpeg",
-    services: ["LASIK", "Retina Care", "Cataract"],
+    title: "General Surgery", 
+    icon: Syringe, 
+    description: "Safe and minimally invasive surgeries for faster recovery and minimal scarring.", 
+    image: "/assets/images/gallery/operating-room.jpeg",
+    services: ["Laparoscopy", "Minor Surgeries", "Trauma Care"],
     className: "md:col-span-2 md:row-span-1" 
   },
 ]
 
 export const labServicesData = [
   {
-    title: "3T MRI & 128-Slice CT",
+    title: "Advanced CT & X-Ray",
     icon: Scan,
-    description: "High-resolution imaging for precise internal diagnostics with rapid reporting.",
+    description: "Low-radiation imaging systems for quick and accurate internal diagnosis.",
     image: "/assets/images/sections/diagnostics-lab.avif",
-    features: ["Silent Scan", "Ultra-fast", "Expert Analysis"]
+    features: ["Instant Reports", "Low Radiation", "24/7 Availability"]
   },
   {
-    title: "4D Ultrasound",
+    title: "Modern Ultrasound",
     icon: Waves,
-    description: "Advanced real-time imaging for obstetric, cardiac, and vascular diagnostics.",
+    description: "Real-time imaging for maternity and internal health checks.",
     image: "/assets/images/gallery/operating-room.jpeg",
-    features: ["Crystal Clear", "Cardiac Echo", "Vascular Doppler"]
+    features: ["Crystal Clear", "Safe for Mothers", "Expert Radiologists"]
   },
   {
-    title: "Precision Lab",
+    title: "Automated Lab",
     icon: Droplets,
-    description: "NABL certified laboratory with automated analysis for zero-error results.",
+    description: "NABL certified laboratory ensuring zero-error and quick results.",
     image: "/assets/images/sections/about-lobby.webp",
-    features: ["Home Collection", "Same-day Reports", "Digital Records"]
+    features: ["Home Collection", "Same-day Results", "Digital Reports"]
   },
   {
-    title: "Onco-Pathology",
+    title: "Emergency Diagnostics",
     icon: FlaskConical,
-    description: "Specialized biopsy analysis and molecular testing for accurate cancer diagnosis.",
+    description: "Immediate diagnostic support for trauma and emergency cases.",
     image: "/assets/images/departments/cardiology.jpeg",
-    features: ["Molecular IHC", "Rapid Biopsy", "Digital Path"]
+    features: ["Prioritized Reports", "Trauma Ready", "Expert Review"]
   },
   {
-    title: "Genomics Center",
-    icon: Dna,
-    description: "Full genome sequencing and genetic counseling for personalized medicine.",
+    title: "Family Screening",
+    icon: Clipboard,
+    description: "Comprehensive health checkups for every member of your family.",
     image: "/assets/images/departments/neurology.jpeg",
-    features: ["DNA Screening", "Cancer Markers", "Family Screening"]
+    features: ["Diabetes Check", "Blood Pressure", "Basic Wellness"]
   },
   {
-    title: "Digital Radiology",
+    title: "Digital Records",
     icon: Radiation,
-    description: "Low-radiation digital X-ray systems with immediate AI-assisted interpretation.",
+    description: "Secure and instant access to all your medical reports digitally.",
     image: "/assets/images/gallery/patient-room.jpeg",
-    features: ["Low Dosage", "Instant View", "Remote Access"]
+    features: ["Paperless", "Easy Sharing", "Lifetime Access"]
   }
 ]
 
 export const healthPackages = [
   {
     title: "Elite Master Checkup",
-    price: "₹14,999",
-    description: "The gold standard in health screening for comprehensive physical assessment.",
-    features: ["Full Blood Profile", "MRI Screening", "Cardiogram (TMT)", "Dietary Consult"],
+    price: "₹4,999",
+    description: "Comprehensive health screening for a complete physical assessment.",
+    features: ["Full Blood Profile", "X-Ray Chest", "ECG", "Doctor Consultation"],
     image: "/assets/images/sections/about-lobby.webp",
     popular: true
   },
   {
-    title: "Cardiac Shield Plus",
-    price: "₹9,999",
-    description: "Targeted heart health evaluation designed by senior cardiologists.",
-    features: ["Echo-Cardiogram", "Cardiac Markers", "Lipid Analysis", "Heart Specialist Consult"],
+    title: "Cardiac Health Shield",
+    price: "₹2,999",
+    description: "Essential heart health evaluation designed for early detection.",
+    features: ["Lipid Profile", "ECG", "Sugar Check", "Heart Specialist Consult"],
     image: "/assets/images/departments/cardiology.jpeg",
     popular: false
   },
   {
-    title: "Women's Wellness",
-    price: "₹7,499",
-    description: "Comprehensive screening tailored for women's physiological health needs.",
-    features: ["Hormone Panel", "Bone Density Scan", "Cancer Markers", "Gynaecology Consult"],
+    title: "Family Wellness Plan",
+    price: "₹1,999",
+    description: "Basic health screening for routine family wellness monitoring.",
+    features: ["Blood Sugar", "HB Count", "Basic Vitals", "General Consult"],
     image: "/assets/images/departments/pediatrics.jpeg",
     popular: false
   }
@@ -133,100 +134,82 @@ export const insurancePartners = [
   { name: "Niva Bupa", logo: "Bupa" },
   { name: "Bajaj Allianz", logo: "Bajaj" },
   { name: "Care Health", logo: "Care" },
-  { name: "Tata AIG", logo: "Tata" },
-  { name: "UnitedHealthcare", logo: "UHC" }
+  { name: "TATA AIG", logo: "TATA" },
+  { name: "United India", logo: "United" }
 ]
 
 export const specialists = [
   { 
-    name: "Dr. Vikramaditya Singh", 
-    specialty: "Chief of Cardiology", 
-    qualifications: "MD, DM (AIIMS), FACC",
-    experience: "22+ Years",
+    name: "Dr. Rajesh Kumar", 
+    specialty: "Senior Consultant – General Medicine", 
+    qualifications: "MD (Medicine)",
+    experience: "15+ Years",
     metrics: { success: 99.6, satisfaction: 4.9 },
-    skills: ["Complex Angioplasty", "TAVI Specialist"],
+    skills: ["Accurate Diagnosis", "Chronic Care"],
     image: "/assets/images/specialists/doctor-1.jpeg" 
   },
   { 
-    name: "Dr. Ananya Iyer", 
-    specialty: "Director of Neurosurgery", 
-    qualifications: "MCh (NIMHANS), Fellowship (Harvard)",
-    experience: "18+ Years",
-    metrics: { success: 98.8, satisfaction: 5.0 },
-    skills: ["Brain Mapping", "Robotic Neurosurgery"],
+    name: "Dr. Anitha Hegde", 
+    specialty: "Specialist – Obstetrics & Gynaecology", 
+    qualifications: "MD, DGO",
+    experience: "12+ Years",
+    metrics: { success: 99.8, satisfaction: 5.0 },
+    skills: ["Painless Delivery", "Maternity Care"],
     image: "/assets/images/specialists/doctor-2.jpg" 
   },
   { 
-    name: "Dr. Rajesh Kulkarni", 
-    specialty: "Senior Orthopedic Surgeon", 
-    qualifications: "MS (Orth), FRCS (UK)",
-    experience: "20+ Years",
-    metrics: { success: 99.2, satisfaction: 4.9 },
-    skills: ["Total Joint Replacement", "Sports Trauma"],
-    image: "/assets/images/departments/orthopedics.jpeg" 
-  },
-  { 
-    name: "Dr. Priya Sharma", 
-    specialty: "Pediatric Director", 
-    qualifications: "MD (Pediatrics), DNB (CMC)",
-    experience: "15+ Years",
-    metrics: { success: 99.9, satisfaction: 5.0 },
-    skills: ["Neonatology", "Pediatric Intensive Care"],
-    image: "/assets/images/departments/pediatrics.jpeg" 
-  },
-  { 
-    name: "Dr. Siddharth Malhotra", 
-    specialty: "Oncology Lead", 
-    qualifications: "MD, DM (Tata Memorial), PhD",
+    name: "Dr. Sandeep Murthy", 
+    specialty: "Chief Surgeon – Orthopedics", 
+    qualifications: "MS (Ortho)",
     experience: "14+ Years",
-    metrics: { success: 96.5, satisfaction: 4.8 },
-    skills: ["Targeted Therapy", "Bone Marrow Transplant"],
-    image: "/assets/images/departments/cardiology.jpeg" 
-  },
+    metrics: { success: 99.2, satisfaction: 4.9 },
+    skills: ["Joint Replacement", "Trauma Surgery"],
+    image: "/assets/images/departments/orthopedics.jpeg" 
+  }
 ]
 
 export const testimonials = [
   {
-    name: "Arjun Mehra",
-    story: "The cardiac team at Elite Hospital saved my life during a critical emergency. Their robotic surgery capabilities and post-op care are truly world-standard.",
-    department: "Cardiology Patient",
+    name: "Manjunath Swamy",
+    story: "We rushed my father to Elite Hospital at 2 AM due to chest pain. The doctors were ready before we even reached. Their quick action and care saved his life. I am forever grateful.",
+    department: "Shimoga",
     rating: 5,
     image: "/assets/images/departments/cardiology.jpeg"
   },
   {
-    name: "Kavita Reddy",
-    story: "My experience at the maternity ward was exceptional. The specialized neonatal care and the empathetic nursing staff made our journey wonderful.",
-    department: "Maternity Patient",
+    name: "Suma R.",
+    story: "My daughter had a high fever that wouldn't go down. The pediatricians here are so patient and friendly. They didn't just give medicines; they made her feel safe. She recovered in 2 days.",
+    department: "Sagar Road, Shimoga",
     rating: 5,
     image: "/assets/images/departments/pediatrics.jpeg"
   },
   {
-    name: "Sanjay Deshmukh",
-    story: "After my knee replacement surgery here, I was back to my active lifestyle in record time. The physiotherapy team is simply outstanding.",
-    department: "Orthopedics Patient",
+    name: "Prakash J.",
+    story: "I had my surgery here. The hospital is very clean and the staff is very disciplined. Most importantly, the final bill was exactly what they quoted—no hidden charges.",
+    department: "Bhadravathi",
     rating: 5,
     image: "/assets/images/departments/orthopedics.jpeg"
   }
 ]
 
 export const hospitalMilestones = [
-  { year: "2010", title: "Inception", description: "Established with a mission to bring JCI-standard clinical excellence to India." },
-  { year: "2015", title: "Robotic Center", description: "First hospital in the region to launch Da Vinci robotic surgery systems." },
-  { year: "2020", title: "Excellence Award", description: "Ranked among Top 1% of Global Hospitals by international health audits." },
-  { year: "2025", title: "AI Integration", description: "Implemented predictive AI diagnostics across all clinical pathways." }
+  { year: "2014", title: "Our Inception", description: "Elite Hospital was established with a mission to bring quality healthcare to Shimoga." },
+  { year: "2018", title: "Advanced ICU", description: "Launched our 24/7 dedicated trauma and intensive care unit with advanced life support." },
+  { year: "2022", title: "Excellence Award", description: "Recognized as the most trusted multispeciality hospital in the Shimoga region." },
+  { year: "2026", title: "Modern Diagnostics", description: "Upgraded to fully automated diagnostic systems for faster and error-free reports." }
 ]
 
 export const hospitalEvents = [
   {
-    title: "Advanced Cardiac Summit 2026",
+    title: "Free Health Screening Camp",
     date: "May 15, 2026",
-    category: "Medical Conference",
+    category: "Community Health",
     image: "/assets/images/gallery/operating-room.jpeg"
   },
   {
-    title: "Rural Health Outreach Camp",
+    title: "Maternity Wellness Workshop",
     date: "June 02, 2026",
-    category: "Philanthropy",
+    category: "Patient Education",
     image: "/assets/images/sections/about-lobby.webp"
   }
 ]

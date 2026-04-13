@@ -7,73 +7,72 @@
     "book_appointment": "Book Appointment"
   },
   "hero": {
-    "title_part1": "Clinical Precision,",
-    "title_part2": "Compassionate",
-    "title_part3": "Excellence",
-    "subtitle": "Experience India's most advanced healthcare ecosystem. Elite Hospital combines world-class clinical expertise with cutting-edge technology to deliver zero-compromise medical outcomes.",
-    "cta_primary": "Schedule a Visit",
-    "cta_secondary": "Learn More"
+    "title_part1": "Complete Medical Care",
+    "title_part2": "Your Family Can",
+    "title_part3": "Trust in Shimoga",
+    "subtitle": "From 24/7 emergency support to expert specialist consultations, Elite Hospital provides advanced healthcare with a human touch. Your health is our priority, every single day.",
+    "cta_primary": "Book Appointment",
+    "cta_secondary": "Call Now",
+    "emergency": "24/7 Emergency Helpline: +91 81822 00000"
   },
   "stats": {
     "years_experience": "Years of Clinical Excellence",
-    "specialists": "Board-Certified Specialists",
-    "surgeries": "Complex Surgeries Completed",
+    "specialists": "Expert Doctors & Surgeons",
+    "surgeries": "Happy Patients Treated",
     "wait_time": "Avg. Clinical Wait Time",
-    "emergency": "Emergency Response",
+    "emergency": "Emergency Available",
     "response_time": "Avg. Response Time"
   },
   "sections": {
-    "body_map": {
-      "title": "Precision Care for Every Part of You",
-      "description": "Hover over the anatomical map to explore our specialized clinical departments and find the expert care you need."
-    },
     "departments": {
-      "title": "World-Class Specialties",
-      "subtitle": "Discover our range of advanced medical services, NABH-accredited facilities, and specialized care units."
+      "title": "Our Specialized Services",
+      "subtitle": "Discover our range of advanced medical services, expert doctors, and specialized care units dedicated to your recovery."
     },
     "diagnostics": {
-      "title": "Advanced Diagnostic & Lab Services",
-      "subtitle": "Precision-driven diagnostics using 3T MRI, 128-slice CT, and NABL-certified automated laboratory systems."
+      "title": "24/7 Diagnostic & Lab Services",
+      "subtitle": "Accurate blood tests, X-rays, and scans under one roof using advanced medical technology."
     },
     "doctors": {
-      "title": "Meet Our Elite Specialists",
-      "subtitle": "A board of world-renowned medical professionals from AIIMS, NIMHANS, and top global institutions."
+      "title": "Meet Our Senior Specialists",
+      "subtitle": "A team of highly experienced medical professionals dedicated to providing compassionate and expert care."
     },
     "testimonials": {
       "title": "Patient Success Stories",
-      "subtitle": "Real recovery journeys from patients who experienced the Elite Hospital standard of clinical care."
+      "subtitle": "Real recovery journeys from patients who experienced the Elite Hospital standard of compassionate care."
     },
     "faq": {
       "title": "Frequently Asked Questions",
       "subtitle": "Essential information regarding our clinical policies, appointments, and patient services."
     },
     "packages": {
-      "title": "Curated Health Packages",
-      "subtitle": "Comprehensive, AI-driven screening programs designed for proactive health management and longevity."
+      "title": "Affordable Health Packages",
+      "subtitle": "Comprehensive health screening programs designed for proactive health management for your entire family."
     },
     "insurance": {
-      "title": "Partnered Insurance Providers",
-      "subtitle": "We accept major Indian and international insurance plans for seamless, cashless healthcare experiences."
+      "title": "Cashless Insurance Partners",
+      "subtitle": "We partner with major insurance providers for a hassle-free and transparent healthcare experience."
     },
     "about": {
-      "title": "A Legacy of Trust & Innovation",
-      "subtitle": "For nearly two decades, Elite Hospital has defined the gold standard in Indian healthcare, combining global clinical protocols with personalized care."
+      "title": "Trusted Healthcare for the People of Shimoga",
+      "subtitle": "For years, Elite Hospital has been a pillar of health for the Shimoga community. We bring world-class multispeciality treatment to our city so that local families don't have to travel far for quality care.",
+      "mission": "To bring advanced, affordable, and compassionate healthcare to every family in Shimoga.",
+      "patient_first": "We treat every patient like family, ensuring they feel safe, heard, and cared for at every step."
     },
     "events": {
-      "title": "Latest Events & Summits",
-      "subtitle": "Stay informed about our medical breakthroughs, global health conferences, and clinical milestones."
+      "title": "Latest Hospital Events",
+      "subtitle": "Stay informed about our health camps, medical breakthroughs, and clinical milestones."
     },
     "gallery": {
-      "title": "Inside Elite Excellence",
-      "subtitle": "Explore our surgical suites, diagnostic centers, and luxury patient healing environments."
+      "title": "Inside Elite Hospital",
+      "subtitle": "Explore our modern facilities, clean patient rooms, and advanced diagnostic centers."
     },
     "performance": {
       "title": "Clinical Performance Dashboard",
-      "subtitle": "Transparent medical outcomes reflecting our commitment to patient safety and surgical precision."
+      "subtitle": "Transparent medical outcomes reflecting our commitment to patient safety and clinical excellence."
     },
     "contact": {
       "title": "Connect With Us",
-      "subtitle": "Our 24/7 concierge and emergency response team is available to assist with your healthcare needs."
+      "subtitle": "Our 24/7 emergency response team is available to assist with your healthcare needs immediately."
     }
   },
   "footer": {

@@ -116,13 +116,13 @@ export function Hero({ dict }: HeroProps) {
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-2 w-fit px-3 py-1 rounded-full bg-royal-cobalt/5 border border-royal-cobalt/20 backdrop-blur-md"
+              className="flex items-center gap-2 w-fit px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 backdrop-blur-md"
             >
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-royal-cobalt opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-royal-cobalt"></span>
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
               </span>
-              <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] text-royal-cobalt">Precision in Every Heartbeat</span>
+              <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.1em] text-red-600 dark:text-red-400">{dict.hero.emergency}</span>
             </motion.div>
 
             <h1 className="flex flex-col w-full gap-1 md:gap-2">
@@ -157,7 +157,7 @@ export function Hero({ dict }: HeroProps) {
               transition={{ delay: 0.4 }}
               className="w-full lg:max-w-xl text-sm md:text-2xl text-muted-foreground leading-relaxed font-medium"
             >
-              Experience the Top 1% of Global Healthcare. Powered by AI diagnostics and compassionate specialists.
+              {dict.hero.subtitle}
             </motion.p>
           </div>
 
@@ -176,15 +176,15 @@ export function Hero({ dict }: HeroProps) {
               </Magnetic>
               
               <button 
-                aria-label="Watch a cinematic video tour of our elite hospital facility"
+                aria-label="Call Elite Hospital Emergency Line"
                 className="flex items-center gap-3 md:gap-4 text-foreground font-bold text-sm group w-full sm:w-auto justify-center sm:justify-start py-1 md:py-2"
               >
                 <div className="size-10 md:size-16 rounded-full border-2 border-royal-cobalt/20 flex items-center justify-center group-hover:bg-royal-cobalt group-hover:text-white transition-all shadow-lg">
-                  <Play size={14} className="md:size-6" fill="currentColor" aria-hidden="true" />
+                  <Activity size={14} className="md:size-6" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col items-start leading-none text-left">
-                   <span className="text-[8px] md:text-xs uppercase tracking-widest text-muted-foreground mb-1">Take a Tour</span>
-                   <span className="text-xs md:text-lg">Elite Facility</span>
+                   <span className="text-[8px] md:text-xs uppercase tracking-widest text-muted-foreground mb-1">Emergency Help</span>
+                   <span className="text-xs md:text-lg">{dict.hero.cta_secondary}</span>
                 </div>
               </button>
             </motion.div>

@@ -75,7 +75,7 @@ export function AboutHospital({ dict }: { dict: any }) {
                         <Target size={24} aria-hidden="true" />
                      </div>
                      <div className="font-bold text-lg">Our Mission</div>
-                     <p className="text-xs text-muted-foreground leading-relaxed">Providing zero-compromise clinical excellence through AI and human compassion.</p>
+                     <p className="text-xs text-muted-foreground leading-relaxed">{dict.sections.about.mission}</p>
                   </div>
                </motion.div>
 
@@ -90,7 +90,7 @@ export function AboutHospital({ dict }: { dict: any }) {
                         <Heart size={24} aria-hidden="true" />
                      </div>
                      <div className="font-bold text-lg">Patient First</div>
-                     <p className="text-xs text-muted-foreground leading-relaxed">Healing is a journey we walk alongside our patients, every step of the way.</p>
+                     <p className="text-xs text-muted-foreground leading-relaxed">{dict.sections.about.patient_first}</p>
                   </div>
                </motion.div>
             </div>
@@ -102,14 +102,14 @@ export function AboutHospital({ dict }: { dict: any }) {
                      <Target size={20} aria-hidden="true" />
                   </div>
                   <div className="font-bold text-base md:text-lg">Our Mission</div>
-                  <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed">Providing zero-compromise clinical excellence through AI and human compassion.</p>
+                  <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed">{dict.sections.about.mission}</p>
                </div>
                <div className="glass p-6 rounded-[2rem] shadow-xl border-white/10 flex flex-col gap-3">
                   <div className="size-10 rounded-xl bg-electric-cyan/20 text-electric-cyan-700 flex items-center justify-center">
                      <Heart size={20} aria-hidden="true" />
                   </div>
                   <div className="font-bold text-base md:text-lg">Patient First</div>
-                  <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed">Healing is a journey we walk alongside our patients, every step of the way.</p>
+                  <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed">{dict.sections.about.patient_first}</p>
                </div>
             </div>
           </div>

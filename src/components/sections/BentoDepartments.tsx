@@ -109,7 +109,15 @@ export function BentoDepartments({ dict }: { dict: any }) {
                Specialized Verticals
             </div>
             <h2 className="text-4xl md:text-8xl font-semibold tracking-tighter leading-none">
-              World-Class <span className="text-gradient-primary italic pr-4">Specialties</span>
+              {dict.sections.departments.title.split(' ').map((word: string, i: number, arr: string[]) => (
+                <span key={i}>
+                  {i === arr.length - 1 ? (
+                    <span className="text-gradient-primary italic pr-4">{word}</span>
+                  ) : (
+                    word + ' '
+                  )}
+                </span>
+              ))}
             </h2>
             <p className="max-w-2xl text-sm md:text-xl text-muted-foreground leading-relaxed font-light">
               {dict.sections.departments.subtitle}
