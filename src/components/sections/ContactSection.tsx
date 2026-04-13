@@ -29,7 +29,7 @@ export function ContactSection({ dict }: { dict: any }) {
         <div className="relative h-[400px] md:h-[600px] lg:h-[700px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-muted group">
           <div className="absolute inset-0 bg-muted">
              <iframe 
-               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.921224141214!2d77.5921!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzUnMzEuNiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.8244185785506!2d75.56841598233149!3d13.929492429925066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbba8d0ec620495%3A0x5589d733c2761a17!2sShivamogga%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1776080955707!5m2!1sen!2sin" 
                className="w-full h-full border-0 grayscale invert opacity-80 group-hover:grayscale-0 group-hover:invert-0 transition-all duration-700" 
                allowFullScreen 
                loading="lazy"

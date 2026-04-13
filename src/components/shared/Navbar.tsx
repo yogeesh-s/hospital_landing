@@ -166,7 +166,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
                 className="flex flex-col gap-4 border-t border-muted/50 pt-6"
               >
                 <div className="flex items-center justify-between bg-muted/30 p-4 rounded-2xl">
-                  <span className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Region / Language</span>
+                  <span className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Language</span>
                   <div className="flex items-center gap-1 bg-white/50 dark:bg-slate-900/50 p-1 rounded-xl border border-white/20" role="group" aria-label="Mobile Language Selector">
                     {i18n.locales.map((locale) => (
                       <Link

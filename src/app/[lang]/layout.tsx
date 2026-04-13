@@ -96,9 +96,9 @@ export default async function RootLayout({
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "123 Health Blvd",
-      "addressLocality": "Bangalore",
+      "addressLocality": "Shimoga",
       "addressRegion": "KA",
-      "postalCode": "560001",
+      "postalCode": "577201",
       "addressCountry": "IN"
     },
     "geo": {
