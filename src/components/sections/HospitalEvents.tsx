@@ -7,16 +7,15 @@ import { hospitalEvents } from "@/lib/data"
 
 export function HospitalEvents({ dict }: { dict: any }) {
   return (
-    <section className="py-16 md:py-32 px-6 bg-muted/5">
+    <section className="py-12 md:py-16 lg:py-20 2xl:py-24 px-6 bg-muted/5">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-24 gap-6 md:gap-8">
           <div className="flex flex-col items-start text-left gap-3 md:gap-6">
-            <div className="flex items-center gap-3 text-royal-cobalt font-black uppercase tracking-[0.3em] text-[10px] md:text-xs">
-               <div className="h-px w-8 md:w-12 bg-royal-cobalt" />
-               Latest Updates
-            </div>
-            <h2 className="text-4xl md:text-8xl font-semibold tracking-tighter leading-none">
-              Events & <span className="text-gradient-primary italic pr-4">Summits</span>
+             <div className="flex items-center gap-3 text-royal-cobalt font-black uppercase tracking-[0.3em] text-[10px] md:text-xs">
+                <div className="h-px w-8 md:w-12 bg-royal-cobalt" />
+                Latest Updates
+             </div>
+             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter leading-none">              Events & <span className="text-gradient-primary italic pr-4">Summits</span>
             </h2>
             <p className="max-w-2xl text-sm md:text-xl text-muted-foreground leading-relaxed font-light">
               {dict.sections.events.subtitle}

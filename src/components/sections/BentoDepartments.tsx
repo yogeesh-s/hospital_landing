@@ -100,16 +100,15 @@ function DepartmentCard({ dept, className }: { dept: typeof departmentsData[0], 
 
 export function BentoDepartments({ dict }: { dict: any }) {
   return (
-    <section className="py-16 md:py-32 px-6 overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 2xl:py-24 px-6 overflow-hidden">
       <div className="max-w-[1400px] mx-auto w-full">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-24 gap-6 md:gap-8">
           <div className="flex flex-col items-start text-left gap-3 md:gap-6">
-            <div className="flex items-center gap-3 text-royal-cobalt font-black uppercase tracking-[0.3em] text-[10px] md:text-xs">
-               <div className="h-px w-8 md:w-12 bg-royal-cobalt" />
-               Specialized Verticals
-            </div>
-            <h2 className="text-4xl md:text-8xl font-semibold tracking-tighter leading-none">
-              {dict.sections.departments.title.split(' ').map((word: string, i: number, arr: string[]) => (
+             <div className="flex items-center gap-3 text-royal-cobalt font-black uppercase tracking-[0.3em] text-[10px] md:text-xs">
+                <div className="h-px w-8 md:w-12 bg-royal-cobalt" />
+                Specialized Verticals
+             </div>
+             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter leading-none">              {dict.sections.departments.title.split(' ').map((word: string, i: number, arr: string[]) => (
                 <span key={i}>
                   {i === arr.length - 1 ? (
                     <span className="text-gradient-primary italic pr-4">{word}</span>

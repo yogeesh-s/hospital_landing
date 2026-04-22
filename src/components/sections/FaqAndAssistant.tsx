@@ -33,7 +33,7 @@ export function FaqAndAssistant({ dict }: { dict: any }) {
   const [isChatOpen, setIsChatOpen] = useState(false)
 
   return (
-    <section className="py-16 md:py-32 px-6 overflow-hidden bg-muted/5">
+    <section className="py-12 md:py-16 lg:py-20 2xl:py-24 px-6 overflow-hidden bg-muted/5">
       <div className="max-w-[1400px] mx-auto">
         {/* Header Section */}
         <div className="flex flex-col items-start text-left mb-10 md:mb-24 gap-3 md:gap-6">
@@ -41,7 +41,7 @@ export function FaqAndAssistant({ dict }: { dict: any }) {
              <div className="h-px w-8 md:w-12 bg-royal-cobalt" />
              Patient Support
           </div>
-          <h2 className="text-4xl md:text-8xl font-semibold tracking-tighter leading-none">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter leading-none">
             Critical <span className="text-gradient-primary italic pr-4">FAQ</span>
           </h2>
           <p className="max-w-2xl text-sm md:text-xl text-muted-foreground leading-relaxed font-light">

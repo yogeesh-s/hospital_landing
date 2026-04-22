@@ -42,7 +42,7 @@ function DoctorCard({ doctor }: { doctor: typeof specialists[0] }) {
       }}
       onClick={() => setIsHovering(!isHovered)}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="relative group min-w-[280px] md:min-w-[450px] h-[450px] md:h-[600px] snap-center lg:cursor-none"
+      className="relative group min-w-[280px] md:min-w-[450px] h-[450px] md:h-[500px] lg:h-[550px] 2xl:h-[600px] snap-center lg:cursor-none"
     >
       <div 
         style={{ transform: "translateZ(50px)" }}
@@ -182,13 +182,13 @@ export function ParallaxSpecialists({ dict }: { dict: any }) {
   }, [isPaused])
 
   return (
-    <section className="py-16 md:py-32 px-6 overflow-hidden relative">
+    <section className="py-12 md:py-16 lg:py-20 2xl:py-24 px-6 overflow-hidden relative">
       <div className="max-w-[1400px] mx-auto flex flex-col items-start text-left mb-10 md:mb-24 gap-3 md:gap-6">
         <div className="flex items-center gap-3 text-royal-cobalt font-black uppercase tracking-[0.3em] text-[10px] md:text-xs">
            <div className="h-px w-8 md:w-12 bg-royal-cobalt" />
            Board of Excellence
         </div>
-        <h2 className="text-4xl md:text-8xl font-semibold tracking-tighter leading-none">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter leading-none">
           Elite <span className="text-gradient-primary italic pr-4">Specialists</span>
         </h2>
         <p className="max-w-2xl text-sm md:text-xl text-muted-foreground leading-relaxed font-light">

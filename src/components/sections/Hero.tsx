@@ -85,7 +85,7 @@ export function Hero({ dict }: HeroProps) {
   const activeCard = rotatingCards[cardIndex]
 
   return (
-    <section ref={containerRef} className="relative w-full h-auto lg:h-screen lg:min-h-[800px] flex flex-col items-center justify-start lg:justify-center px-4 md:px-6 pt-22 md:pt-48 pb-16 md:pb-20 overflow-x-clip">
+    <section ref={containerRef} className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center px-4 md:px-6 pt-[120px] md:pt-[140px] lg:pt-[160px] 2xl:pt-[180px] pb-12 lg:pb-16 2xl:pb-24 overflow-x-clip">
       <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--color-royal-cobalt)_0%,transparent_100%)] opacity-[0.03]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -126,11 +126,11 @@ export function Hero({ dict }: HeroProps) {
             </motion.div>
 
             <h1 className="flex flex-col w-full gap-1 md:gap-2">
-              <span className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-slate-900 dark:text-white">
+              <span className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-slate-900 dark:text-white">
                 <Reveal delay={0.1}>{dict.hero.title_part1}</Reveal>
               </span>
               <span className="flex items-center gap-3 md:gap-6">
-                 <span className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-gradient-primary">
+                 <span className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-gradient-primary">
                    <Reveal delay={0.2}>{dict.hero.title_part2}</Reveal>
                  </span>
                  <motion.div 
@@ -146,7 +146,7 @@ export function Hero({ dict }: HeroProps) {
                     />
                  </motion.div>
               </span>
-              <span className="text-3xl md:text-8xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-slate-900 dark:text-white">
+              <span className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter leading-[0.95] md:leading-[0.85] text-slate-900 dark:text-white">
                 <Reveal delay={0.3}>{dict.hero.title_part3}</Reveal>
               </span>
             </h1>

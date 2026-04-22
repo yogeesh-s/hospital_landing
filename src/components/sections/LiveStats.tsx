@@ -156,7 +156,7 @@ function StatCard({ value, suffix = "", label, icon: Icon, delay = 0, color, id 
 
 export function LiveStats({ dict }: { dict: any }) {
   return (
-    <section className="py-16 md:py-32 px-4 md:px-6 overflow-hidden relative bg-background">
+    <section className="py-12 md:py-16 lg:py-20 2xl:py-24 px-4 md:px-6 overflow-hidden relative bg-background">
       {/* Background Data Matrix Pattern */}
       <div className="absolute inset-0 -z-10 opacity-[0.15] dark:opacity-[0.05]">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
@@ -171,7 +171,7 @@ export function LiveStats({ dict }: { dict: any }) {
                <div className="h-px w-6 md:w-10 bg-royal-cobalt" />
                Realtime Clinical Intelligence
             </div>
-            <h2 className="text-4xl md:text-8xl font-semibold tracking-tighter leading-none">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter leading-none">
               Live Trust <span className="text-gradient-primary italic pr-4">Metrics</span>
             </h2>
             <div className="flex flex-wrap items-center gap-4 mt-2">

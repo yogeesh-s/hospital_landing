@@ -40,7 +40,7 @@ All generated files must strictly adhere to this map:
     - **Secondary Accent:** Electric Cyan (`oklch(0.80 0.20 200)`) – Technical innovation.
 - **Layout Consistency:** Global section width standardized to **1400px** (`max-w-[1400px] mx-auto`).
 - **Typography Architecture:** 
-    - **Headings:** Standardized **`text-8xl`** (desktop) and **`text-4xl`** (mobile) font-semibold with `tracking-tighter`.
+    - **Headings:** Standardized **`text-3xl`** (mobile), **`md:text-4xl`**, **`lg:text-5xl`**, **`xl:text-6xl`**, and **`2xl:text-7xl`** font-semibold with `tracking-tighter`.
     - **Signature Style:** Use `<span className="text-gradient-primary italic pr-4">Word</span>` for secondary words.
 - **Branding Signature:** Always include "Developed by **Vorabbit**" in the footer bottom bar with cobalt styling.
 
@@ -57,5 +57,5 @@ All generated files must strictly adhere to this map:
 - **Directives:** Interactive components MUST use `"use client"`.
 - **Image Optimization:** All images are optimized via the custom loader (`src/lib/image-loader.js`). Do NOT use `unoptimized: true` in component code.
 - **Data Architecture:** No hardcoded content in sections. All strings come from dictionaries; all structured data lives in `src/lib/data.ts`.
-- **Vertical Rhythm:** Standardized vertical padding: **`py-16` (mobile)** and **`py-32` (desktop)**.
+- **Vertical Rhythm:** Standardized vertical padding: **`py-12`** (mobile), **`md:py-16`**, **`lg:py-20`**, and **`2xl:py-24`**.
 - **Type Safety:** 100% Strict TypeScript. No `any` types.
